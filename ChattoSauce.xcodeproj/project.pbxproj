@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AB23B1087CA4F86B4A1276B /* libPods-ChattoSauce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B25F66FF91173227700A85 /* libPods-ChattoSauce.a */; };
+		3C01CEA121C8D5610029FB80 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEA021C8D5610029FB80 /* FriendCell.m */; };
+		3C01CEA421C8E72C0029FB80 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEA321C8E72C0029FB80 /* BaseCell.m */; };
+		3C01CEA721C8F09C0029FB80 /* UIView+Constraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEA621C8F09C0029FB80 /* UIView+Constraint.m */; };
+		3C01CEAB21C94C050029FB80 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEAA21C94C050029FB80 /* Friend.m */; };
+		3C01CEAE21C9EF890029FB80 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEAD21C9EF890029FB80 /* Message.m */; };
+		3C61723E21D5E96D00818F05 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C61723D21D5E96D00818F05 /* CustomTabBarController.m */; };
+		3C75B3EF21C7A63A00B2BEE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75B3EE21C7A63A00B2BEE0 /* AppDelegate.m */; };
+		3C75B3F221C7A63A00B2BEE0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75B3F121C7A63A00B2BEE0 /* LoginViewController.m */; };
+		3C75B3F521C7A63A00B2BEE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C75B3F321C7A63A00B2BEE0 /* Main.storyboard */; };
+		3C75B3F721C7A63C00B2BEE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C75B3F621C7A63C00B2BEE0 /* Assets.xcassets */; };
+		3C75B3FA21C7A63C00B2BEE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C75B3F821C7A63C00B2BEE0 /* LaunchScreen.storyboard */; };
+		3C75B3FD21C7A63C00B2BEE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75B3FC21C7A63C00B2BEE0 /* main.m */; };
+		3C75B40821C7FF8400B2BEE0 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75B40721C7FF8300B2BEE0 /* FriendsViewController.m */; };
+		3C75D9A721DCD2CD00EBCFF1 /* OpenDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75D9A621DCD2CD00EBCFF1 /* OpenDatabase.m */; };
+		3C75D9AD21DCD51100EBCFF1 /* FileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75D9AC21DCD51100EBCFF1 /* FileWriter.m */; };
+		3C75D9B121DCE1B300EBCFF1 /* MessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75D9B021DCE1B300EBCFF1 /* MessageHelper.m */; };
+		3C75D9B421DCE4CE00EBCFF1 /* MessageTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75D9B321DCE4CE00EBCFF1 /* MessageTable.m */; };
+		3C75D9B721DCE66500EBCFF1 /* CreateTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75D9B621DCE66500EBCFF1 /* CreateTableModel.m */; };
+		3C75D9BC21DD097500EBCFF1 /* FriendHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75D9BB21DD097500EBCFF1 /* FriendHelper.m */; };
+		3C75D9BF21DD09DD00EBCFF1 /* FriendTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75D9BE21DD09DD00EBCFF1 /* FriendTable.m */; };
+		3C973D1521CA5E1D00AA4512 /* FriendsViewController+SetupData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C973D1421CA5E1D00AA4512 /* FriendsViewController+SetupData.m */; };
+		3CA51A1E21DDEFC5002625B9 /* ChatLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA51A1D21DDEFC5002625B9 /* ChatLogCell.m */; };
+		3CA51A2121DDFC33002625B9 /* ChatLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA51A2021DDFC33002625B9 /* ChatLogViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C01CE9F21C8D5610029FB80 /* FriendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		3C01CEA021C8D5610029FB80 /* FriendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
+		3C01CEA221C8E72C0029FB80 /* BaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCell.h; sourceTree = "<group>"; };
+		3C01CEA321C8E72C0029FB80 /* BaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
+		3C01CEA521C8F09C0029FB80 /* UIView+Constraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Constraint.h"; sourceTree = "<group>"; };
+		3C01CEA621C8F09C0029FB80 /* UIView+Constraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Constraint.m"; sourceTree = "<group>"; };
+		3C01CEA921C94C050029FB80 /* Friend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		3C01CEAA21C94C050029FB80 /* Friend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		3C01CEAC21C9EF890029FB80 /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		3C01CEAD21C9EF890029FB80 /* Message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		3C61723C21D5E96D00818F05 /* CustomTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
+		3C61723D21D5E96D00818F05 /* CustomTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
+		3C75B3EA21C7A63A00B2BEE0 /* ChattoSauce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChattoSauce.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C75B3ED21C7A63A00B2BEE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3C75B3EE21C7A63A00B2BEE0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3C75B3F021C7A63A00B2BEE0 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3C75B3F121C7A63A00B2BEE0 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		3C75B3F421C7A63A00B2BEE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C75B3F621C7A63C00B2BEE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C75B3F921C7A63C00B2BEE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3C75B3FB21C7A63C00B2BEE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C75B3FC21C7A63C00B2BEE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3C75B40621C7FF8300B2BEE0 /* FriendsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		3C75B40721C7FF8300B2BEE0 /* FriendsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		3C75D9A521DCD2CD00EBCFF1 /* OpenDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenDatabase.h; sourceTree = "<group>"; };
+		3C75D9A621DCD2CD00EBCFF1 /* OpenDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenDatabase.m; sourceTree = "<group>"; };
+		3C75D9A921DCD46100EBCFF1 /* prefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prefixHeader.h; sourceTree = "<group>"; };
+		3C75D9AB21DCD51100EBCFF1 /* FileWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileWriter.h; sourceTree = "<group>"; };
+		3C75D9AC21DCD51100EBCFF1 /* FileWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileWriter.m; sourceTree = "<group>"; };
+		3C75D9AF21DCE1B300EBCFF1 /* MessageHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageHelper.h; sourceTree = "<group>"; };
+		3C75D9B021DCE1B300EBCFF1 /* MessageHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageHelper.m; sourceTree = "<group>"; };
+		3C75D9B221DCE4CE00EBCFF1 /* MessageTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTable.h; sourceTree = "<group>"; };
+		3C75D9B321DCE4CE00EBCFF1 /* MessageTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTable.m; sourceTree = "<group>"; };
+		3C75D9B521DCE66500EBCFF1 /* CreateTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateTableModel.h; sourceTree = "<group>"; };
+		3C75D9B621DCE66500EBCFF1 /* CreateTableModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateTableModel.m; sourceTree = "<group>"; };
+		3C75D9BA21DD097500EBCFF1 /* FriendHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendHelper.h; sourceTree = "<group>"; };
+		3C75D9BB21DD097500EBCFF1 /* FriendHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendHelper.m; sourceTree = "<group>"; };
+		3C75D9BD21DD09DD00EBCFF1 /* FriendTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendTable.h; sourceTree = "<group>"; };
+		3C75D9BE21DD09DD00EBCFF1 /* FriendTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendTable.m; sourceTree = "<group>"; };
+		3C973D1321CA5E1D00AA4512 /* FriendsViewController+SetupData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FriendsViewController+SetupData.h"; sourceTree = "<group>"; };
+		3C973D1421CA5E1D00AA4512 /* FriendsViewController+SetupData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FriendsViewController+SetupData.m"; sourceTree = "<group>"; };
+		3CA51A1C21DDEFC5002625B9 /* ChatLogCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatLogCell.h; sourceTree = "<group>"; };
+		3CA51A1D21DDEFC5002625B9 /* ChatLogCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatLogCell.m; sourceTree = "<group>"; };
+		3CA51A1F21DDFC33002625B9 /* ChatLogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatLogViewController.h; sourceTree = "<group>"; };
+		3CA51A2021DDFC33002625B9 /* ChatLogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatLogViewController.m; sourceTree = "<group>"; };
+		60B25F66FF91173227700A85 /* libPods-ChattoSauce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChattoSauce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8643E9B53BD3C51EB2236B /* Pods-ChattoSauce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattoSauce.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChattoSauce/Pods-ChattoSauce.release.xcconfig"; sourceTree = "<group>"; };
+		ECAA4BDBC2D5E93941AD7EA1 /* Pods-ChattoSauce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattoSauce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChattoSauce/Pods-ChattoSauce.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C75B3E721C7A63A00B2BEE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB23B1087CA4F86B4A1276B /* libPods-ChattoSauce.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C01CE9C21C885AB0029FB80 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3C75D9AA21DCD50500EBCFF1 /* FileWriter */,
+				3C75D9A421DCD2A400EBCFF1 /* FMDB */,
+				3C01CE9D21C885B90029FB80 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3C01CE9D21C885B90029FB80 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C973D1321CA5E1D00AA4512 /* FriendsViewController+SetupData.h */,
+				3C973D1421CA5E1D00AA4512 /* FriendsViewController+SetupData.m */,
+				3C01CEA521C8F09C0029FB80 /* UIView+Constraint.h */,
+				3C01CEA621C8F09C0029FB80 /* UIView+Constraint.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3C01CE9E21C8D53D0029FB80 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3C01CE9F21C8D5610029FB80 /* FriendCell.h */,
+				3C01CEA021C8D5610029FB80 /* FriendCell.m */,
+				3C01CEA221C8E72C0029FB80 /* BaseCell.h */,
+				3C01CEA321C8E72C0029FB80 /* BaseCell.m */,
+				3CA51A1C21DDEFC5002625B9 /* ChatLogCell.h */,
+				3CA51A1D21DDEFC5002625B9 /* ChatLogCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3C01CEA821C948110029FB80 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3C01CEA921C94C050029FB80 /* Friend.h */,
+				3C01CEAA21C94C050029FB80 /* Friend.m */,
+				3C01CEAC21C9EF890029FB80 /* Message.h */,
+				3C01CEAD21C9EF890029FB80 /* Message.m */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3C75B3E121C7A63900B2BEE0 = {
+			isa = PBXGroup;
+			children = (
+				3C75B3EC21C7A63A00B2BEE0 /* ChattoSauce */,
+				3C75B3EB21C7A63A00B2BEE0 /* Products */,
+				CAF990818A12C613766DACFC /* Pods */,
+				FBECA8A21FFE9D00AD0C5E76 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3C75B3EB21C7A63A00B2BEE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C75B3EA21C7A63A00B2BEE0 /* ChattoSauce.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C75B3EC21C7A63A00B2BEE0 /* ChattoSauce */ = {
+			isa = PBXGroup;
+			children = (
+				3CA51A1721DDBBEB002625B9 /* Controllers */,
+				3C75D9AE21DCE05E00EBCFF1 /* Models */,
+				3C75D9A821DCD44500EBCFF1 /* Config */,
+				3C01CEA821C948110029FB80 /* Domain */,
+				3C01CE9E21C8D53D0029FB80 /* Cells */,
+				3C01CE9C21C885AB0029FB80 /* Helpers */,
+				3C75B3ED21C7A63A00B2BEE0 /* AppDelegate.h */,
+				3C75B3EE21C7A63A00B2BEE0 /* AppDelegate.m */,
+				3C75B3F321C7A63A00B2BEE0 /* Main.storyboard */,
+				3C75B3F621C7A63C00B2BEE0 /* Assets.xcassets */,
+				3C75B3F821C7A63C00B2BEE0 /* LaunchScreen.storyboard */,
+				3C75B3FB21C7A63C00B2BEE0 /* Info.plist */,
+				3C75B3FC21C7A63C00B2BEE0 /* main.m */,
+			);
+			path = ChattoSauce;
+			sourceTree = "<group>";
+		};
+		3C75D9A421DCD2A400EBCFF1 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				3C75D9A521DCD2CD00EBCFF1 /* OpenDatabase.h */,
+				3C75D9A621DCD2CD00EBCFF1 /* OpenDatabase.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		3C75D9A821DCD44500EBCFF1 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3C75D9A921DCD46100EBCFF1 /* prefixHeader.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		3C75D9AA21DCD50500EBCFF1 /* FileWriter */ = {
+			isa = PBXGroup;
+			children = (
+				3C75D9AB21DCD51100EBCFF1 /* FileWriter.h */,
+				3C75D9AC21DCD51100EBCFF1 /* FileWriter.m */,
+			);
+			path = FileWriter;
+			sourceTree = "<group>";
+		};
+		3C75D9AE21DCE05E00EBCFF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C75D9B921DCE97B00EBCFF1 /* Friend */,
+				3C75D9B821DCE96D00EBCFF1 /* Message */,
+				3C75D9B521DCE66500EBCFF1 /* CreateTableModel.h */,
+				3C75D9B621DCE66500EBCFF1 /* CreateTableModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3C75D9B821DCE96D00EBCFF1 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				3C75D9AF21DCE1B300EBCFF1 /* MessageHelper.h */,
+				3C75D9B021DCE1B300EBCFF1 /* MessageHelper.m */,
+				3C75D9B221DCE4CE00EBCFF1 /* MessageTable.h */,
+				3C75D9B321DCE4CE00EBCFF1 /* MessageTable.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		3C75D9B921DCE97B00EBCFF1 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				3C75D9BA21DD097500EBCFF1 /* FriendHelper.h */,
+				3C75D9BB21DD097500EBCFF1 /* FriendHelper.m */,
+				3C75D9BD21DD09DD00EBCFF1 /* FriendTable.h */,
+				3C75D9BE21DD09DD00EBCFF1 /* FriendTable.m */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		3CA51A1721DDBBEB002625B9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3CA51A1B21DDBC36002625B9 /* TabBar */,
+				3CA51A1A21DDBC21002625B9 /* Friend */,
+				3CA51A1921DDBC11002625B9 /* Chat */,
+				3CA51A1821DDBC0C002625B9 /* Login */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3CA51A1821DDBC0C002625B9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3C75B3F021C7A63A00B2BEE0 /* LoginViewController.h */,
+				3C75B3F121C7A63A00B2BEE0 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3CA51A1921DDBC11002625B9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				3CA51A1F21DDFC33002625B9 /* ChatLogViewController.h */,
+				3CA51A2021DDFC33002625B9 /* ChatLogViewController.m */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		3CA51A1A21DDBC21002625B9 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				3C75B40621C7FF8300B2BEE0 /* FriendsViewController.h */,
+				3C75B40721C7FF8300B2BEE0 /* FriendsViewController.m */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		3CA51A1B21DDBC36002625B9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				3C61723C21D5E96D00818F05 /* CustomTabBarController.h */,
+				3C61723D21D5E96D00818F05 /* CustomTabBarController.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CAF990818A12C613766DACFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECAA4BDBC2D5E93941AD7EA1 /* Pods-ChattoSauce.debug.xcconfig */,
+				AF8643E9B53BD3C51EB2236B /* Pods-ChattoSauce.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FBECA8A21FFE9D00AD0C5E76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60B25F66FF91173227700A85 /* libPods-ChattoSauce.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C75B3E921C7A63A00B2BEE0 /* ChattoSauce */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C75B40021C7A63C00B2BEE0 /* Build configuration list for PBXNativeTarget "ChattoSauce" */;
+			buildPhases = (
+				6D309CCA41FECA6385D039C7 /* [CP] Check Pods Manifest.lock */,
+				3C75B3E621C7A63A00B2BEE0 /* Sources */,
+				3C75B3E721C7A63A00B2BEE0 /* Frameworks */,
+				3C75B3E821C7A63A00B2BEE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChattoSauce;
+			productName = ChattoSauce;
+			productReference = 3C75B3EA21C7A63A00B2BEE0 /* ChattoSauce.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C75B3E221C7A63A00B2BEE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = iOSHive;
+				TargetAttributes = {
+					3C75B3E921C7A63A00B2BEE0 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 3C75B3E521C7A63A00B2BEE0 /* Build configuration list for PBXProject "ChattoSauce" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C75B3E121C7A63900B2BEE0;
+			productRefGroup = 3C75B3EB21C7A63A00B2BEE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C75B3E921C7A63A00B2BEE0 /* ChattoSauce */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C75B3E821C7A63A00B2BEE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C75B3FA21C7A63C00B2BEE0 /* LaunchScreen.storyboard in Resources */,
+				3C75B3F721C7A63C00B2BEE0 /* Assets.xcassets in Resources */,
+				3C75B3F521C7A63A00B2BEE0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D309CCA41FECA6385D039C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChattoSauce-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C75B3E621C7A63A00B2BEE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C75B40821C7FF8400B2BEE0 /* FriendsViewController.m in Sources */,
+				3C75B3F221C7A63A00B2BEE0 /* LoginViewController.m in Sources */,
+				3C75D9B721DCE66500EBCFF1 /* CreateTableModel.m in Sources */,
+				3C75D9BF21DD09DD00EBCFF1 /* FriendTable.m in Sources */,
+				3C61723E21D5E96D00818F05 /* CustomTabBarController.m in Sources */,
+				3C75B3FD21C7A63C00B2BEE0 /* main.m in Sources */,
+				3CA51A1E21DDEFC5002625B9 /* ChatLogCell.m in Sources */,
+				3C75D9AD21DCD51100EBCFF1 /* FileWriter.m in Sources */,
+				3C75D9A721DCD2CD00EBCFF1 /* OpenDatabase.m in Sources */,
+				3C75D9BC21DD097500EBCFF1 /* FriendHelper.m in Sources */,
+				3C75D9B421DCE4CE00EBCFF1 /* MessageTable.m in Sources */,
+				3C01CEAB21C94C050029FB80 /* Friend.m in Sources */,
+				3C01CEA121C8D5610029FB80 /* FriendCell.m in Sources */,
+				3C01CEA421C8E72C0029FB80 /* BaseCell.m in Sources */,
+				3C973D1521CA5E1D00AA4512 /* FriendsViewController+SetupData.m in Sources */,
+				3C01CEAE21C9EF890029FB80 /* Message.m in Sources */,
+				3C75D9B121DCE1B300EBCFF1 /* MessageHelper.m in Sources */,
+				3C75B3EF21C7A63A00B2BEE0 /* AppDelegate.m in Sources */,
+				3C01CEA721C8F09C0029FB80 /* UIView+Constraint.m in Sources */,
+				3CA51A2121DDFC33002625B9 /* ChatLogViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3C75B3F321C7A63A00B2BEE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C75B3F421C7A63A00B2BEE0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3C75B3F821C7A63C00B2BEE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C75B3F921C7A63C00B2BEE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C75B3FE21C7A63C00B2BEE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3C75B3FF21C7A63C00B2BEE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C75B40121C7A63C00B2BEE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECAA4BDBC2D5E93941AD7EA1 /* Pods-ChattoSauce.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ND778ZQ8A6;
+				INFOPLIST_FILE = ChattoSauce/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiveios.ChattoSauce;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3C75B40221C7A63C00B2BEE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF8643E9B53BD3C51EB2236B /* Pods-ChattoSauce.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ND778ZQ8A6;
+				INFOPLIST_FILE = ChattoSauce/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiveios.ChattoSauce;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C75B3E521C7A63A00B2BEE0 /* Build configuration list for PBXProject "ChattoSauce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C75B3FE21C7A63C00B2BEE0 /* Debug */,
+				3C75B3FF21C7A63C00B2BEE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C75B40021C7A63C00B2BEE0 /* Build configuration list for PBXNativeTarget "ChattoSauce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C75B40121C7A63C00B2BEE0 /* Debug */,
+				3C75B40221C7A63C00B2BEE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C75B3E221C7A63A00B2BEE0 /* Project object */;
+}
