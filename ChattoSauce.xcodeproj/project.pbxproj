@@ -162,11 +162,11 @@
 		3C75B3EC21C7A63A00B2BEE0 /* ChattoSauce */ = {
 			isa = PBXGroup;
 			children = (
-				3CA51A1721DDBBEB002625B9 /* Controllers */,
 				3C75D9AE21DCE05E00EBCFF1 /* Models */,
+				59AD625521E337C3008B20C1 /* Views */,
+				3CA51A1721DDBBEB002625B9 /* Controllers */,
 				3C75D9A821DCD44500EBCFF1 /* Config */,
 				3C01CEA821C948110029FB80 /* Domain */,
-				3C01CE9E21C8D53D0029FB80 /* Cells */,
 				3C01CE9C21C885AB0029FB80 /* Helpers */,
 				3C75B3ED21C7A63A00B2BEE0 /* AppDelegate.h */,
 				3C75B3EE21C7A63A00B2BEE0 /* AppDelegate.m */,
@@ -283,6 +283,14 @@
 				3C61723D21D5E96D00818F05 /* CustomTabBarController.m */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		59AD625521E337C3008B20C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C01CE9E21C8D53D0029FB80 /* Cells */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CAF990818A12C613766DACFC /* Pods */ = {

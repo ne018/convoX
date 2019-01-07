@@ -1,0 +1,139 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+
+# Xcode
+# 
+
+## Build generated
+build/
+DerivedData/
+
+## OS X files
+.DS_Store
+.DS_Store?
+.Trashes
+.Spotlight-V100
+*.swp
+
+## Xcode private settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+
+## For collaboration with co-developers
+
+## XCODEPROJ Section
+ChattoSauce.xcodeproj/project.xcworkspace/*
+ChattoSauce.xcodeproj/project.xcworkspace/xcuserdata/*
+
+
+## Clone lines of code below then change WHOAMI to your whoami name in your terminal.
+#ChattoSauce.xcodeproj/project.xcworkspace/xcuserdata/WHOAMI.xcuserdatad/*
+#ChattoSauce.xcodeproj/xcuserdata/WHOAMI.xcuserdatad/xcschemes/ChatSauce.xcscheme
+#ChattoSauce.xcodeproj/project.xcworkspace/xcuserdata/WHOAMI.xcuserdatad/UserInterfaceState.xcuserstate
+#ChattoSauce.xcodeproj/xcuserdata/WHOAMI.xcuserdatad/xcschemes/xcschememanagement.plist
+
+# -- dr3y start --
+ChattoSauce.xcodeproj/project.xcworkspace/xcuserdata/dr3y.xcuserdatad/*
+ChattoSauce.xcodeproj/xcuserdata/dr3y.xcuserdatad/xcschemes/ChatSauce.xcscheme
+ChattoSauce.xcodeproj/project.xcworkspace/xcuserdata/dr3y.xcuserdatad/UserInterfaceState.xcuserstate
+ChattoSauce.xcodeproj/xcuserdata/dr3y.xcuserdatad/xcschemes/xcschememanagement.plist
+# -- dr3y end --
+
+## XCWORKSPACE Section
+ChattoSauce.xcworkspace/*
+ChattoSauce.xcworkspace/xcuserdata/*
+ChattoSauce.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+
+## Clone lines of code below then change WHOAMI to your whoami name in your terminal.
+#ChatSauce.xcworkspace/xcuserdata/WHOAMI.xcuserdatad/*
+#ChatSauce.xcworkspace/xcuserdata/WHOAMI.xcuserdatad/UserInterfaceState.xcuserstate
+#ChatSauce.xcworkspace/xcuserdata/WHOAMI.xcuserdatad/xcdebugger/*
+#ChatSauce.xcworkspace/xcuserdata/WHOAMI.xcuserdatad/WorkspaceSettings.xcsettings
+#ChatSauce.xcworkspace/xcuserdata/WHOAMI.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+
+# -- dr3y start --
+ChattoSauce.xcworkspace/xcuserdata/dr3y.xcuserdatad/*
+ChattoSauce.xcworkspace/xcuserdata/dr3y.xcuserdatad/UserInterfaceState.xcuserstate
+ChattoSauce.xcworkspace/xcuserdata/dr3y.xcuserdatad/xcdebugger/*
+ChattoSauce.xcworkspace/xcuserdata/dr3y.xcuserdatad/WorkspaceSettings.xcsettings
+ChattoSauce.xcworkspace/xcuserdata/dr3y.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+# -- dr3y end --
+
+## PODS Section
+Podfile.lock
+Podfile.lock/
+Pods/*
+Pods/Pods.xcodeproj/xcuserdata/*
+## Clone lines of code below then change WHOAMI to your whoami name in your terminal.
+# Pods/Pods.xcodeproj/xcuserdata/WHOAMI.xcuserdatad/xcscheme
+# Pods/Pods.xcodeproj/xcuserdata/WHOAMI.xcuserdatad/xcschemes
+# Pods/Pods.xcodeproj/xcuserdata/WHOAMI.xcuserdatad/xcschemes/*
+# Pods/Pods.xcodeproj/xcuserdata/WHOAMI.xcuserdatad/*
+
+# -- dr3y start --
+Pods/Pods.xcodeproj/xcuserdata/dr3y.xcuserdatad/xcscheme
+Pods/Pods.xcodeproj/xcuserdata/dr3y.xcuserdatad/xcschemes
+Pods/Pods.xcodeproj/xcuserdata/dr3y.xcuserdatad/xcschemes/*
+Pods/Pods.xcodeproj/xcuserdata/dr3y.xcuserdatad/*
+# -- dr3y end --
+
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+*.xcuserstate
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+.DS_Store
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+.build/
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+# Pods/
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+## END
