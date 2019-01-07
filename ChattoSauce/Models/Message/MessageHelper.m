@@ -57,7 +57,7 @@ static MessageHelper *messageHelper;
     NSMutableArray *messageList = [[NSMutableArray alloc] init];
     [self.databaseQueue openFlags];
     [self.databaseQueue inTransaction:^(FMDatabase * _Nonnull db, BOOL * _Nonnull rollback) {
-        NSString *selectQuery = [NSString stringWithFormat:@"SELECT * FROM message WHERE fkfriendid = %@ ORDER BY date DESC", friendID];
+        NSString *selectQuery = [NSString stringWithFormat:@"SELECT * FROM message WHERE fkfriendid = %@ ORDER BY date ASC", friendID];
         FMResultSet *result = [db executeQuery:selectQuery];
         while ([result next]) {
             Message *messageDomain = [[Message alloc] initWithDictionary:[result resultDictionary]];
