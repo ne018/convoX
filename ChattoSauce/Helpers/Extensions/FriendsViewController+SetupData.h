@@ -7,12 +7,15 @@
 //
 
 #import "FriendsViewController.h"
+#import "Friend.h"
+#import "Message.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FriendsViewController (SetupData)
 
 -(void)setupData;
++(Message *)createMessageWithText:(NSString *)text withFriend:(Friend *)friend withMinutes:(int)minutes isSender:(BOOL)isSender;
 
 @end
 

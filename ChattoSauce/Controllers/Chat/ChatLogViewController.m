@@ -12,6 +12,7 @@
 #import "Message.h"
 #import "FriendHelper.h"
 #import "prefixHeader.h"
+#import "FriendsViewController+SetupData.h"
 
 @interface ChatLogViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -72,16 +73,69 @@ static NSString * const reuseIdentifier = @"ChatLogCell";
         [_sendButton setTitle:@"Send" forState:UIControlStateNormal];
         [_sendButton setTitleColor:THEMECOLOR1 forState:UIControlStateNormal];
         _sendButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
+        [_sendButton addTarget:self action:@selector(handleSend) forControlEvents:UIControlEventTouchUpInside];
     }
     return _sendButton;
+}
+
+-(void)handleSend{
+    if(self.inputTextField.text.length > 0){
+        @try {
+            Message *message = [FriendsViewController createMessageWithText:self.inputTextField.text withFriend:self.myFriend withMinutes:1 isSender:true];
+            if(message != nil){
+                [self.messages addObject:message];
+                NSIndexPath *insertionIndexPath = [NSIndexPath indexPathForItem:self.messages.count - 1 inSection:0];
+                [self.collectionView insertItemsAtIndexPaths:@[insertionIndexPath]];
+                [self.collectionView scrollToItemAtIndexPath:insertionIndexPath atScrollPosition:UICollectionViewScrollPositionBottom animated:true];
+                self.inputTextField.text = nil;
+            }
+        } @catch (NSException *exception) {
+            NSLog(@"Err: %@", exception);
+        } @finally {
+            //
+        }
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [self scrollToLastChatContentSize:true];
 }
 
+-(void)handleSimulate{
+    @try {
+        Message *message = [FriendsViewController createMessageWithText:@"Here's a text message that was sent few minutes ago..." withFriend:self.myFriend withMinutes:1 isSender:false];
+        if(message != nil){
+            [self.messages addObject:message];
+            NSArray *tempArray = [[NSArray alloc] initWithArray:self.messages];
+            NSSortDescriptor * descriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+            NSArray *sortedMsgs = [tempArray sortedArrayUsingDescriptors:@[descriptor]];
+            [self.messages removeAllObjects];
+            [self.messages addObjectsFromArray:sortedMsgs];
+//            NSMutableArray *fetchMessages = [[MessageHelper instance] fetchMessagesByFriendID:self.myFriend.friendid];
+//            if(fetchMessages.count > 0){
+//                for (Message *msg in fetchMessages) {
+//                    Friend *friend = [[FriendHelper instance] getFriendByParam:@{@"friendid":msg.fkfriendid}];
+//                    msg.myFriend = friend;
+//                    [self.messages addObject:msg];
+//                }
+//            }
+            
+            NSInteger itemMsg = [self.messages indexOfObject:message];
+            NSIndexPath *insertionIndexPath = [NSIndexPath indexPathForItem:itemMsg inSection:0];
+            [self.collectionView insertItemsAtIndexPaths:@[insertionIndexPath]];
+            [self scrollToLastChatContentSize:false];
+        }
+    } @catch (NSException *exception) {
+        NSLog(@"Err: %@", exception);
+    } @finally {
+        //
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Simulate" style:UIBarButtonItemStylePlain target:self action:@selector(handleSimulate)];
     
     self.tabBarController.tabBar.hidden = true;
     self.collectionView.alwaysBounceVertical = true;
