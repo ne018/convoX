@@ -10,6 +10,9 @@
 #import "FriendsViewcontroller+SetupData.h"
 #import "FriendCell.h"
 #import "ChatLogViewController.h"
+#import "LoginViewController.h"
+#import "PeopleViewController.h"
+#import "Firebase.h"
 
 @interface FriendsViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -26,8 +29,16 @@ static NSString * const reuseIdentifier = @"FriendCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Recent";
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    
+    [self checkIfUserIsLogged];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(handleLogout)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Compose" style:UIBarButtonItemStylePlain target:self action:@selector(handleNewMessage)];
+    self.navigationItem.rightBarButtonItem.enabled = false;
+    
+    self.navigationItem.title = @"Recent";
     self.collectionView.alwaysBounceVertical = true;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -36,7 +47,39 @@ static NSString * const reuseIdentifier = @"FriendCell";
     [self setupData];
 }
 
--(NSMutableArray *)messages{
+-(void)handleNewMessage{
+    PeopleViewController *peopleVC = [[PeopleViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:peopleVC];
+    [self presentViewController:navController animated:true completion:nil];
+}
+
+-(void)checkIfUserIsLogged{
+    if([FIRAuth.auth currentUser].uid == nil){
+        [self performSelector:@selector(handleLogout) withObject:nil afterDelay:0];
+    }else{
+        NSString *uid = FIRAuth.auth.currentUser.uid;
+        [[[FIRDatabase.database.reference child:@"users"] child:uid] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            NSDictionary *snapshotDict = (NSDictionary *)snapshot;
+        } withCancelBlock:nil];
+    }
+}
+
+- (void)handleLogout{
+    
+    @try {
+        NSError *errorSignout;
+        [FIRAuth.auth signOut:&errorSignout];
+    } @catch (NSException *exception) {
+        NSLog(@"error logout: %@", exception);
+    } @finally {
+        //
+    }
+    
+    LoginViewController *loginVC = [[LoginViewController alloc] init];
+    [self presentViewController:loginVC animated:true completion:nil];
+}
+
+- (NSMutableArray *)messages{
     if(!_messages){
         _messages = [[NSMutableArray alloc] init];
     }

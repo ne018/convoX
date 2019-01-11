@@ -83,9 +83,9 @@
     self.nameLabel.text = message.myFriend.name;
     self.messageLabel.text = message.text;
     
-    if(message.myFriend.profileImageName != nil){
-        self.profileImgVw.image = [UIImage imageNamed:message.myFriend.profileImageName];
-        self.hasReadImgVw.image = [UIImage imageNamed:message.myFriend.profileImageName];
+    if(message.myFriend.profileimagename != nil){
+        self.profileImgVw.image = [UIImage imageNamed:message.myFriend.profileimagename];
+        self.hasReadImgVw.image = [UIImage imageNamed:message.myFriend.profileimagename];
     }
     if(message.date != nil){
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

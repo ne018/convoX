@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LoginViewController.h"
 #import "CustomTabBarController.h"
+#import "Firebase.h"
 
 @interface AppDelegate ()
 
@@ -23,11 +24,14 @@
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     [self.window makeKeyAndVisible];
     
+    // for login
 //    LoginViewController *vc = [[LoginViewController alloc] init];
 //    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
 //    self.window.rootViewController = navController;
     
-    self.window.rootViewController = [CustomTabBarController new];
+    // for auto logged in
+     self.window.rootViewController = [CustomTabBarController new];
+    [FIRApp configure];
     
     return YES;
 }

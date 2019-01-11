@@ -14,13 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *friendid;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *profileImageName;
+@property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSString *profileimagename;
 
 @property (nonatomic, strong) NSSet *messages;
 
 @property (nonatomic) NSDictionary *dictForm;
 
--(instancetype)initWithName:(NSString *)name profileImageName:(NSString *)profileImageName;
+-(instancetype)initWithName:(NSString *)name email:(NSString *)email profileimagename:(NSString *)profileimagename;
 -(instancetype)initWithDictionary:(NSDictionary *)dict;
 
 @end

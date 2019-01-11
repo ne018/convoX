@@ -9,6 +9,7 @@
 
 #import "FriendsViewController.h"
 #import "CustomTabBarController.h"
+#import "PeopleViewController.h"
 
 @interface CustomTabBarController ()
 
@@ -22,11 +23,19 @@
     // layout custom view controllers
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     FriendsViewController *friendsvc = [[FriendsViewController alloc] initWithCollectionViewLayout:flowLayout];
+    
     UINavigationController *recentMessagesNavController = [[UINavigationController alloc] initWithRootViewController:friendsvc];
     recentMessagesNavController.tabBarItem.title = @"Recent";
     recentMessagesNavController.tabBarItem.image = [UIImage imageNamed:@"recent"];
     
-    self.viewControllers = @[recentMessagesNavController, [self createDummyNavControllerWithTitle:@"Calls" withImageName:@"calls"], [self createDummyNavControllerWithTitle:@"Groups" withImageName:@"users"], [self createDummyNavControllerWithTitle:@"People" withImageName:@"list"], [self createDummyNavControllerWithTitle:@"Settings" withImageName:@"settings"]];
+    PeopleViewController *peopleVC = [[PeopleViewController alloc] init];
+    peopleVC.navigationItem.rightBarButtonItem = nil;
+    
+    UINavigationController *peopleMessagesNavController = [[UINavigationController alloc] initWithRootViewController:peopleVC];
+    peopleMessagesNavController.tabBarItem.title = @"Connections";
+    peopleMessagesNavController.tabBarItem.image = [UIImage imageNamed:@"list"];
+    
+    self.viewControllers = @[recentMessagesNavController, [self createDummyNavControllerWithTitle:@"Calls" withImageName:@"calls"], [self createDummyNavControllerWithTitle:@"Groups" withImageName:@"users"], peopleMessagesNavController, [self createDummyNavControllerWithTitle:@"Settings" withImageName:@"settings"]];
 }
 
 - (UINavigationController *)createDummyNavControllerWithTitle:(NSString *)title withImageName:(NSString *)imageName{

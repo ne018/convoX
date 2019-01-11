@@ -13,6 +13,7 @@
 		3C01CEA721C8F09C0029FB80 /* UIView+Constraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEA621C8F09C0029FB80 /* UIView+Constraint.m */; };
 		3C01CEAB21C94C050029FB80 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEAA21C94C050029FB80 /* Friend.m */; };
 		3C01CEAE21C9EF890029FB80 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEAD21C9EF890029FB80 /* Message.m */; };
+		3C18BC2921E4FAEB005A57AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C18BC2821E4FAEB005A57AB /* GoogleService-Info.plist */; };
 		3C61723E21D5E96D00818F05 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C61723D21D5E96D00818F05 /* CustomTabBarController.m */; };
 		3C75B3EF21C7A63A00B2BEE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75B3EE21C7A63A00B2BEE0 /* AppDelegate.m */; };
 		3C75B3F221C7A63A00B2BEE0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75B3F121C7A63A00B2BEE0 /* LoginViewController.m */; };
@@ -31,6 +32,12 @@
 		3C973D1521CA5E1D00AA4512 /* FriendsViewController+SetupData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C973D1421CA5E1D00AA4512 /* FriendsViewController+SetupData.m */; };
 		3CA51A1E21DDEFC5002625B9 /* ChatLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA51A1D21DDEFC5002625B9 /* ChatLogCell.m */; };
 		3CA51A2121DDFC33002625B9 /* ChatLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA51A2021DDFC33002625B9 /* ChatLogViewController.m */; };
+		3CEC107A21E59C9C004848B0 /* CustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC107921E59C9C004848B0 /* CustomAlertView.m */; };
+		3CEC107E21E5BE28004848B0 /* PeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC107D21E5BE28004848B0 /* PeopleViewController.m */; };
+		3CEC108121E5C682004848B0 /* PeopleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC108021E5C682004848B0 /* PeopleCell.m */; };
+		3CEC108821E63028004848B0 /* CachedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC108721E63028004848B0 /* CachedImageView.m */; };
+		3CEC108B21E6306B004848B0 /* CacheController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC108A21E6306B004848B0 /* CacheController.m */; };
+		3CEC108E21E630AD004848B0 /* DiscardableImageCacheItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC108D21E630AD004848B0 /* DiscardableImageCacheItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +51,7 @@
 		3C01CEAA21C94C050029FB80 /* Friend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 		3C01CEAC21C9EF890029FB80 /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		3C01CEAD21C9EF890029FB80 /* Message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		3C18BC2821E4FAEB005A57AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3C61723C21D5E96D00818F05 /* CustomTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
 		3C61723D21D5E96D00818F05 /* CustomTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
 		3C75B3EA21C7A63A00B2BEE0 /* ChattoSauce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChattoSauce.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +87,18 @@
 		3CA51A1D21DDEFC5002625B9 /* ChatLogCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatLogCell.m; sourceTree = "<group>"; };
 		3CA51A1F21DDFC33002625B9 /* ChatLogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatLogViewController.h; sourceTree = "<group>"; };
 		3CA51A2021DDFC33002625B9 /* ChatLogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatLogViewController.m; sourceTree = "<group>"; };
+		3CEC107821E59C9C004848B0 /* CustomAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAlertView.h; sourceTree = "<group>"; };
+		3CEC107921E59C9C004848B0 /* CustomAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAlertView.m; sourceTree = "<group>"; };
+		3CEC107C21E5BE28004848B0 /* PeopleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeopleViewController.h; sourceTree = "<group>"; };
+		3CEC107D21E5BE28004848B0 /* PeopleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeopleViewController.m; sourceTree = "<group>"; };
+		3CEC107F21E5C682004848B0 /* PeopleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeopleCell.h; sourceTree = "<group>"; };
+		3CEC108021E5C682004848B0 /* PeopleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeopleCell.m; sourceTree = "<group>"; };
+		3CEC108621E63028004848B0 /* CachedImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CachedImageView.h; sourceTree = "<group>"; };
+		3CEC108721E63028004848B0 /* CachedImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CachedImageView.m; sourceTree = "<group>"; };
+		3CEC108921E6306B004848B0 /* CacheController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheController.h; sourceTree = "<group>"; };
+		3CEC108A21E6306B004848B0 /* CacheController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheController.m; sourceTree = "<group>"; };
+		3CEC108C21E630AD004848B0 /* DiscardableImageCacheItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscardableImageCacheItem.h; sourceTree = "<group>"; };
+		3CEC108D21E630AD004848B0 /* DiscardableImageCacheItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscardableImageCacheItem.m; sourceTree = "<group>"; };
 		60B25F66FF91173227700A85 /* libPods-ChattoSauce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChattoSauce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8643E9B53BD3C51EB2236B /* Pods-ChattoSauce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattoSauce.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChattoSauce/Pods-ChattoSauce.release.xcconfig"; sourceTree = "<group>"; };
 		ECAA4BDBC2D5E93941AD7EA1 /* Pods-ChattoSauce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattoSauce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChattoSauce/Pods-ChattoSauce.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +119,8 @@
 		3C01CE9C21C885AB0029FB80 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3CEC108521E6300D004848B0 /* CachedImage */,
+				3CEC107721E59C7D004848B0 /* CustomAlertView */,
 				3C75D9AA21DCD50500EBCFF1 /* FileWriter */,
 				3C75D9A421DCD2A400EBCFF1 /* FMDB */,
 				3C01CE9D21C885B90029FB80 /* Extensions */,
@@ -126,6 +148,8 @@
 				3C01CEA321C8E72C0029FB80 /* BaseCell.m */,
 				3CA51A1C21DDEFC5002625B9 /* ChatLogCell.h */,
 				3CA51A1D21DDEFC5002625B9 /* ChatLogCell.m */,
+				3CEC107F21E5C682004848B0 /* PeopleCell.h */,
+				3CEC108021E5C682004848B0 /* PeopleCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -162,6 +186,7 @@
 		3C75B3EC21C7A63A00B2BEE0 /* ChattoSauce */ = {
 			isa = PBXGroup;
 			children = (
+				3C18BC2821E4FAEB005A57AB /* GoogleService-Info.plist */,
 				3C75D9AE21DCE05E00EBCFF1 /* Models */,
 				59AD625521E337C3008B20C1 /* Views */,
 				3CA51A1721DDBBEB002625B9 /* Controllers */,
@@ -241,6 +266,7 @@
 		3CA51A1721DDBBEB002625B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3CEC107B21E5BE02004848B0 /* People */,
 				3CA51A1B21DDBC36002625B9 /* TabBar */,
 				3CA51A1A21DDBC21002625B9 /* Friend */,
 				3CA51A1921DDBC11002625B9 /* Chat */,
@@ -283,6 +309,37 @@
 				3C61723D21D5E96D00818F05 /* CustomTabBarController.m */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		3CEC107721E59C7D004848B0 /* CustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				3CEC107821E59C9C004848B0 /* CustomAlertView.h */,
+				3CEC107921E59C9C004848B0 /* CustomAlertView.m */,
+			);
+			path = CustomAlertView;
+			sourceTree = "<group>";
+		};
+		3CEC107B21E5BE02004848B0 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				3CEC107C21E5BE28004848B0 /* PeopleViewController.h */,
+				3CEC107D21E5BE28004848B0 /* PeopleViewController.m */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		3CEC108521E6300D004848B0 /* CachedImage */ = {
+			isa = PBXGroup;
+			children = (
+				3CEC108621E63028004848B0 /* CachedImageView.h */,
+				3CEC108721E63028004848B0 /* CachedImageView.m */,
+				3CEC108921E6306B004848B0 /* CacheController.h */,
+				3CEC108A21E6306B004848B0 /* CacheController.m */,
+				3CEC108C21E630AD004848B0 /* DiscardableImageCacheItem.h */,
+				3CEC108D21E630AD004848B0 /* DiscardableImageCacheItem.m */,
+			);
+			path = CachedImage;
 			sourceTree = "<group>";
 		};
 		59AD625521E337C3008B20C1 /* Views */ = {
@@ -369,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C75B3FA21C7A63C00B2BEE0 /* LaunchScreen.storyboard in Resources */,
+				3C18BC2921E4FAEB005A57AB /* GoogleService-Info.plist in Resources */,
 				3C75B3F721C7A63C00B2BEE0 /* Assets.xcassets in Resources */,
 				3C75B3F521C7A63A00B2BEE0 /* Main.storyboard in Resources */,
 			);
@@ -406,22 +464,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CEC108121E5C682004848B0 /* PeopleCell.m in Sources */,
 				3C75B40821C7FF8400B2BEE0 /* FriendsViewController.m in Sources */,
+				3CEC108821E63028004848B0 /* CachedImageView.m in Sources */,
+				3CEC108B21E6306B004848B0 /* CacheController.m in Sources */,
 				3C75B3F221C7A63A00B2BEE0 /* LoginViewController.m in Sources */,
 				3C75D9B721DCE66500EBCFF1 /* CreateTableModel.m in Sources */,
 				3C75D9BF21DD09DD00EBCFF1 /* FriendTable.m in Sources */,
 				3C61723E21D5E96D00818F05 /* CustomTabBarController.m in Sources */,
 				3C75B3FD21C7A63C00B2BEE0 /* main.m in Sources */,
 				3CA51A1E21DDEFC5002625B9 /* ChatLogCell.m in Sources */,
+				3CEC108E21E630AD004848B0 /* DiscardableImageCacheItem.m in Sources */,
 				3C75D9AD21DCD51100EBCFF1 /* FileWriter.m in Sources */,
 				3C75D9A721DCD2CD00EBCFF1 /* OpenDatabase.m in Sources */,
 				3C75D9BC21DD097500EBCFF1 /* FriendHelper.m in Sources */,
 				3C75D9B421DCE4CE00EBCFF1 /* MessageTable.m in Sources */,
 				3C01CEAB21C94C050029FB80 /* Friend.m in Sources */,
+				3CEC107A21E59C9C004848B0 /* CustomAlertView.m in Sources */,
 				3C01CEA121C8D5610029FB80 /* FriendCell.m in Sources */,
 				3C01CEA421C8E72C0029FB80 /* BaseCell.m in Sources */,
 				3C973D1521CA5E1D00AA4512 /* FriendsViewController+SetupData.m in Sources */,
 				3C01CEAE21C9EF890029FB80 /* Message.m in Sources */,
+				3CEC107E21E5BE28004848B0 /* PeopleViewController.m in Sources */,
 				3C75D9B121DCE1B300EBCFF1 /* MessageHelper.m in Sources */,
 				3C75B3EF21C7A63A00B2BEE0 /* AppDelegate.m in Sources */,
 				3C01CEA721C8F09C0029FB80 /* UIView+Constraint.m in Sources */,
