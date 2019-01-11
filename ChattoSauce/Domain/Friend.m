@@ -10,12 +10,13 @@
 
 @implementation Friend
 
--(instancetype)initWithName:(NSString *)name profileImageName:(NSString *)profileImageName{
+-(instancetype)initWithName:(NSString *)name email:(NSString *)email profileImageName:(NSString *)profileimagename{
     self = [super init];
     if(!self) return nil;
     
     _name = name;
-    _profileImageName = profileImageName;
+    _email = email;
+    _profileimagename = profileimagename;
     
     return self;
 }
@@ -25,7 +26,8 @@
     if(self) {
         self.friendid = dict[@"friendid"];
         self.name = dict[@"name"];
-        self.profileImageName = dict[@"profileimagename"];
+        self.email = dict[@"email"];
+        self.profileimagename = dict[@"profileimagename"];
         
         self.dictForm = dict; // custom param
     }

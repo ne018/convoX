@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *friendid;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *profileimagename;
 
 @property (nonatomic, strong) NSDictionary *dictForm;
@@ -21,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSString *)TABLE_NAME;
 +(NSString *)FRIENDID;
 +(NSString *)NAME;
++(NSString *)EMAIL;
 +(NSString *)PROFILEIMAGENAME;
 
 + (NSString *)CREATE_STRING;

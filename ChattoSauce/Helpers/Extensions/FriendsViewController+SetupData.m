@@ -11,6 +11,7 @@
 #import "FriendHelper.h"
 
 #import "OpenDatabase.h"
+#import "Firebase.h"
 
 @implementation FriendsViewController (SetupData)
 
@@ -23,6 +24,28 @@
     
     [self clearData];
     
+//    [self dummyDatas];
+    [self fetchUsers];
+    
+    [self loadData];
+    
+}
+
+-(void)fetchUsers{
+    [[FIRDatabase.database.reference child:@"users"] observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        NSDictionary *snapshotDict = (NSDictionary *)snapshot.value;
+        NSString *myEmail = [FIRAuth.auth.currentUser email];
+        if(!([myEmail compare:[snapshotDict valueForKey:@"email"] options:NSCaseInsensitiveSearch] == NSOrderedSame)){
+            [[FriendHelper instance] insertFriend:snapshotDict];
+        }
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        // do code here
+    }];
+    
+    self.navigationItem.rightBarButtonItem.enabled = true;
+}
+
+-(void)dummyDatas{
     NSDictionary *billGatesDict = @{@"name":@"Bill Gates", @"profileimagename":@"billgates"};
     [[FriendHelper instance] insertFriend:billGatesDict];
     Friend *friendBill = [[FriendHelper instance] getFriendByParam:@{@"name":@"Bill Gates"}];
@@ -46,7 +69,7 @@
     NSDictionary *sundarpichaiDict = @{@"name":@"Sundar Pichai", @"profileimagename":@"sundarpichai"};
     [[FriendHelper instance] insertFriend:sundarpichaiDict];
     Friend *friendSundar = [[FriendHelper instance] getFriendByParam:@{@"name":@"Sundar Pichai"}];
-
+    
     [FriendsViewController createMessageWithText:@"This is only a dummy text message bro, i just want to test your ios chat app." withFriend:friendSundar withMinutes:1 isSender:false];
     [FriendsViewController createMessageWithText:@"This is only a dummy text message bro, i just want to test your ios chat app." withFriend:friendSundar withMinutes:1 isSender:false];
     [FriendsViewController createMessageWithText:@"This is only a dummy text message bro, i just want to test your ios chat app." withFriend:friendSundar withMinutes:1 isSender:false];
@@ -55,9 +78,6 @@
     [FriendsViewController createMessageWithText:@"The quick brown fox jump over the lazy dog." withFriend:friendSundar withMinutes:1 isSender:false];
     [FriendsViewController createMessageWithText:@"How was it, Adrian?" withFriend:friendSundar withMinutes:1 isSender:false];
     [FriendsViewController createMessageWithText:@"I'm cool bro, i will beep you back once there's some new features in my app" withFriend:friendSundar withMinutes:1 isSender:true];
-    
-    [self loadData];
-    
 }
 
 +(Message *)createMessageWithText:(NSString *)text withFriend:(Friend *)friend withMinutes:(int)minutes isSender:(BOOL)isSender{

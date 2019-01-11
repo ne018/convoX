@@ -88,7 +88,7 @@ static FriendHelper *friendHelper;
     [self.databaseQueue openFlags];
     [self.databaseQueue inTransaction:^(FMDatabase * _Nonnull db, BOOL * _Nonnull rollback) {
         FriendTable *friendTable = [[FriendTable alloc] initWithDictionary:dict];
-        NSString *selectQuery = [friendTable selectString:@{@"friendid":friendTable.friendid}];
+        NSString *selectQuery = [friendTable selectString:@{@"email":friendTable.email}];
         FMResultSet *result = [db executeQuery:selectQuery];
         Friend *friendDomain = nil;
         while ([result next]) {

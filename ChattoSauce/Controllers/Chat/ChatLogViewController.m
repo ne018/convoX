@@ -14,12 +14,14 @@
 #import "prefixHeader.h"
 #import "FriendsViewController+SetupData.h"
 
-@interface ChatLogViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface ChatLogViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UIView *messageInputContainerView;
 @property (nonatomic, strong) UITextField *inputTextField;
 @property (nonatomic, strong) NSLayoutConstraint *inputBottomConstraint;
 @property (nonatomic, strong) UIButton *sendButton;
+@property (nonatomic, strong) UIButton *sendImage;
+@property (nonatomic, strong) UIImagePickerController *imagePickerController;
 
 @end
 
@@ -78,6 +80,15 @@ static NSString * const reuseIdentifier = @"ChatLogCell";
     return _sendButton;
 }
 
+-(UIButton *)sendImage{
+    if(!_sendImage){
+        _sendImage = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_sendImage setImage:[UIImage imageNamed:@"upload_image_icon"] forState:UIControlStateNormal];
+        [_sendImage addTarget:self action:@selector(handleImageSend) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _sendImage;
+}
+
 -(void)handleSend{
     if(self.inputTextField.text.length > 0){
         @try {
@@ -95,6 +106,34 @@ static NSString * const reuseIdentifier = @"ChatLogCell";
             //
         }
     }
+}
+
+-(void)handleImageSend{
+    self.imagePickerController = [[UIImagePickerController alloc] init];
+    self.imagePickerController.allowsEditing = true;
+    self.imagePickerController.delegate = self;
+    self.imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:self.imagePickerController animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info{
+    
+    [picker dismissViewControllerAnimated:YES completion:^{
+        UIImage *selectedImageFromPicker;
+        UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+        UIImage *editedImage = [info objectForKey:UIImagePickerControllerEditedImage];
+        
+        if(editedImage) {
+            selectedImageFromPicker = editedImage;
+        } else if (originalImage){
+            selectedImageFromPicker = originalImage;
+        }
+        
+        if (selectedImageFromPicker ){
+            
+        }
+    }];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -190,8 +229,10 @@ static NSString * const reuseIdentifier = @"ChatLogCell";
             [self.collectionView setContentOffset:CGPointMake(0, self.collectionView.contentSize.height - self.collectionView.frame.size.height + 50) animated:NO];
         }
     }else{
-        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.messages.count - 1 inSection:0];
-        [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionBottom animated:true];
+        if(self.messages.count > 0){
+            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.messages.count - 1 inSection:0];
+            [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionBottom animated:true];
+        }
     }
 }
 
@@ -211,9 +252,11 @@ static NSString * const reuseIdentifier = @"ChatLogCell";
     
     [self.messageInputContainerView addSubview: self.inputTextField];
     [self.messageInputContainerView addSubview: self.sendButton];
+    [self.messageInputContainerView addSubview: self.sendImage];
     [self.messageInputContainerView addSubview: topBorderView];
     
-    [self.messageInputContainerView addConstraintsWithFormat:@"H:|-8-[v0][v1(60)]|" withViews:self.inputTextField, self.sendButton,nil];
+    [self.messageInputContainerView addConstraintsWithFormat:@"H:|[v0(44)]-2-[v1][v2(60)]|" withViews:self.sendImage,self.inputTextField, self.sendButton,nil];
+    [self.messageInputContainerView addConstraintsWithFormat:@"V:|[v0(44)]|" withViews:self.sendImage, nil];
     [self.messageInputContainerView addConstraintsWithFormat:@"V:|[v0]|" withViews:self.inputTextField, nil];
     [self.messageInputContainerView addConstraintsWithFormat:@"V:|[v0]|" withViews:self.sendButton, nil];
     
@@ -241,7 +284,7 @@ static NSString * const reuseIdentifier = @"ChatLogCell";
     }
     
     NSString *messageText = [[self.messages objectAtIndex:indexPath.item] text];
-    NSString *profileImageName = [[self.messages objectAtIndex:indexPath.item] myFriend].profileImageName;
+    NSString *profileImageName = [[self.messages objectAtIndex:indexPath.item] myFriend].profileimagename;
     
     
     if(profileImageName.length > 0){

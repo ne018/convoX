@@ -2,6 +2,7 @@
 
 # Xcode
 # 
+# gitignore contributors: hiveDevs - jonas, johnpaul, jaime, david, dré
 
 ## Build generated
 build/
@@ -34,17 +35,17 @@ ChattoSauce.xcodeproj/project.xcworkspace/xcuserdata/*
 
 
 ## Clone lines of code below then change WHOAMI to your whoami name in your terminal.
-#ChattoSauce.xcodeproj/project.xcworkspace/xcuserdata/WHOAMI.xcuserdatad/*
-#ChattoSauce.xcodeproj/xcuserdata/WHOAMI.xcuserdatad/xcschemes/ChatSauce.xcscheme
-#ChattoSauce.xcodeproj/project.xcworkspace/xcuserdata/WHOAMI.xcuserdatad/UserInterfaceState.xcuserstate
-#ChattoSauce.xcodeproj/xcuserdata/WHOAMI.xcuserdatad/xcschemes/xcschememanagement.plist
+#ChatSauce.xcodeproj/project.xcworkspace/xcuserdata/WHOAMI.xcuserdatad/*
+#ChatSauce.xcodeproj/xcuserdata/WHOAMI.xcuserdatad/xcschemes/ChatSauce.xcscheme
+#ChatSauce.xcodeproj/project.xcworkspace/xcuserdata/WHOAMI.xcuserdatad/UserInterfaceState.xcuserstate
+#ChatSauce.xcodeproj/xcuserdata/WHOAMI.xcuserdatad/xcschemes/xcschememanagement.plist
 
-# -- dr3y start --
-ChattoSauce.xcodeproj/project.xcworkspace/xcuserdata/dr3y.xcuserdatad/*
-ChattoSauce.xcodeproj/xcuserdata/dr3y.xcuserdatad/xcschemes/ChatSauce.xcscheme
-ChattoSauce.xcodeproj/project.xcworkspace/xcuserdata/dr3y.xcuserdatad/UserInterfaceState.xcuserstate
-ChattoSauce.xcodeproj/xcuserdata/dr3y.xcuserdatad/xcschemes/xcschememanagement.plist
-# -- dr3y end --
+# -- dreysmbp start --
+ChattoSauce.xcodeproj/project.xcworkspace/xcuserdata/dreysmbp.xcuserdatad/*
+ChattoSauce.xcodeproj/xcuserdata/dreysmbp.xcuserdatad/xcschemes/ChatSauce.xcscheme
+ChattoSauce.xcodeproj/project.xcworkspace/xcuserdata/dreysmbp.xcuserdatad/UserInterfaceState.xcuserstate
+ChattoSauce.xcodeproj/xcuserdata/dreysmbp.xcuserdatad/xcschemes/xcschememanagement.plist
+# -- dreysmbp end --
 
 ## XCWORKSPACE Section
 ChattoSauce.xcworkspace/*
@@ -59,11 +60,11 @@ ChattoSauce.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
 #ChatSauce.xcworkspace/xcuserdata/WHOAMI.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
 
 # -- dr3y start --
-ChattoSauce.xcworkspace/xcuserdata/dr3y.xcuserdatad/*
-ChattoSauce.xcworkspace/xcuserdata/dr3y.xcuserdatad/UserInterfaceState.xcuserstate
-ChattoSauce.xcworkspace/xcuserdata/dr3y.xcuserdatad/xcdebugger/*
-ChattoSauce.xcworkspace/xcuserdata/dr3y.xcuserdatad/WorkspaceSettings.xcsettings
-ChattoSauce.xcworkspace/xcuserdata/dr3y.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+ChattoSauce.xcworkspace/xcuserdata/dreysmbp.xcuserdatad/*
+ChattoSauce.xcworkspace/xcuserdata/dreysmbp.xcuserdatad/UserInterfaceState.xcuserstate
+ChattoSauce.xcworkspace/xcuserdata/dreysmbp.xcuserdatad/xcdebugger/*
+ChattoSauce.xcworkspace/xcuserdata/dreysmbp.xcuserdatad/WorkspaceSettings.xcsettings
+ChattoSauce.xcworkspace/xcuserdata/dreysmbp.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
 # -- dr3y end --
 
 ## PODS Section
@@ -77,12 +78,12 @@ Pods/Pods.xcodeproj/xcuserdata/*
 # Pods/Pods.xcodeproj/xcuserdata/WHOAMI.xcuserdatad/xcschemes/*
 # Pods/Pods.xcodeproj/xcuserdata/WHOAMI.xcuserdatad/*
 
-# -- dr3y start --
-Pods/Pods.xcodeproj/xcuserdata/dr3y.xcuserdatad/xcscheme
-Pods/Pods.xcodeproj/xcuserdata/dr3y.xcuserdatad/xcschemes
-Pods/Pods.xcodeproj/xcuserdata/dr3y.xcuserdatad/xcschemes/*
-Pods/Pods.xcodeproj/xcuserdata/dr3y.xcuserdatad/*
-# -- dr3y end --
+# -- dreysmbp start --
+Pods/Pods.xcodeproj/xcuserdata/dreysmbp.xcuserdatad/xcscheme
+Pods/Pods.xcodeproj/xcuserdata/dreysmbp.xcuserdatad/xcschemes
+Pods/Pods.xcodeproj/xcuserdata/dreysmbp.xcuserdatad/xcschemes/*
+Pods/Pods.xcodeproj/xcuserdata/dreysmbp.xcuserdatad/*
+# -- dreysmbp end --
 
 
 ## Other

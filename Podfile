@@ -8,5 +8,9 @@ target 'ChattoSauce' do
   # Pods for ChattoSauce
   
   pod 'FMDB'
+  # pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
 
 end

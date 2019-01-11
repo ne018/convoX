@@ -18,6 +18,7 @@
         NSMutableDictionary *dictModel = @{
                                            @"friendid":@"",
                                            @"name":@"",
+                                           @"email":@"",
                                            @"profileimagename":@""
                                            }.mutableCopy;
         for (NSString *key in [dict allKeys]) {
@@ -40,6 +41,7 @@
         NSMutableDictionary *dictModel = @{
                                            @"friendid":@"",
                                            @"name":@"",
+                                           @"email":@"",
                                            @"profileimagename":@""
                                            }.mutableCopy;
         for (NSString *key in [dict allKeys]) {
@@ -235,6 +237,9 @@
 +(NSString *)NAME {
     return @"name";
 }
++(NSString *)EMAIL {
+    return @"email";
+}
 +(NSString *)PROFILEIMAGENAME{
     return @"profileimagename";
 }
@@ -258,6 +263,10 @@
     [stringArr addObject:[CreateTableModel TEXT_TYPE]];
     [stringArr addObject:[CreateTableModel COMMA_SEP]];
     
+    [stringArr addObject:[self EMAIL]];
+    [stringArr addObject:[CreateTableModel TEXT_TYPE]];
+    [stringArr addObject:[CreateTableModel COMMA_SEP]];
+    
     [stringArr addObject:[self PROFILEIMAGENAME]];
     [stringArr addObject:[CreateTableModel TEXT_TYPE]];
     [stringArr addObject:[CreateTableModel PARAMEND]];
@@ -277,6 +286,8 @@
     [stringArr addObject:[self FRIENDID]];
     [stringArr addObject:[CreateTableModel COMMA_SEP]];
     [stringArr addObject:[self NAME]];
+    [stringArr addObject:[CreateTableModel COMMA_SEP]];
+    [stringArr addObject:[self EMAIL]];
     [stringArr addObject:[CreateTableModel COMMA_SEP]];
     [stringArr addObject:[self PROFILEIMAGENAME]];
     [stringArr addObject:[CreateTableModel PARAMEND]];
