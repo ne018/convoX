@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FriendsViewController (SetupData)
 
 -(void)setupData;
+-(void)clearData;
 +(Message *)createMessageWithText:(NSString *)text withFriend:(Friend *)friend withMinutes:(int)minutes isSender:(BOOL)isSender;
 
 @end

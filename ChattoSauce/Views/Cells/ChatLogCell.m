@@ -25,6 +25,21 @@
     return _messageTextView;
 }
 
+-(CachedImageView *)messageImageView{
+    if(!_messageImageView){
+        _messageImageView = [[CachedImageView alloc] init];
+        _messageImageView.layer.cornerRadius = 16;
+        _messageImageView.layer.masksToBounds = true;
+        _messageImageView.contentMode = UIViewContentModeScaleAspectFill;
+        _messageImageView.backgroundColor = [UIColor blackColor];
+        _messageImageView.userInteractionEnabled = true;
+        
+        UITapGestureRecognizer *tapImage = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleZoomTap:)];
+        [_messageImageView addGestureRecognizer:tapImage];
+    }
+    return _messageImageView;
+}
+
 -(UIView *)textBubbleView{
     if(!_textBubbleView){
         _textBubbleView = [[UIView alloc] init];
@@ -35,9 +50,9 @@
     return _textBubbleView;
 }
 
--(UIImageView *)profileImageView{
+-(CachedImageView *)profileImageView{
     if(!_profileImageView){
-        _profileImageView = [[UIImageView alloc] init];
+        _profileImageView = [[CachedImageView alloc] init];
         _profileImageView.contentMode = UIViewContentModeScaleAspectFill;
         _profileImageView.layer.cornerRadius = 15;
         _profileImageView.layer.masksToBounds = true;
@@ -54,6 +69,19 @@
     return _bubbleImageView;
 }
 
+-(void)handleZoomTap:(UITapGestureRecognizer *)tapGesture{
+    if([tapGesture.view isKindOfClass:UIImageView.class]){
+        UIImageView *zoominImageView = (UIImageView *)tapGesture.view;
+        if(zoominImageView.image == nil){
+            return;
+        }
+        if(CGSizeEqualToSize(zoominImageView.image.size, CGSizeZero)){
+            return;
+        }
+        [self.chatLogController performZoomInStartingImageView: zoominImageView];
+    }
+}
+
 -(void)setupViews{
     [super setupViews];
     
@@ -61,13 +89,19 @@
     [self.contentView addSubview:self.messageTextView];
     [self.contentView addSubview:self.profileImageView];
     
+    self.profileImageView.image = [UIImage imageNamed:@"avatar"];
+    
     [self addConstraintsWithFormat:@"H:|-8-[v0(30)]" withViews:self.profileImageView, nil];
     [self addConstraintsWithFormat:@"V:[v0(30)]|" withViews:self.profileImageView, nil];
-    self.profileImageView.backgroundColor = [UIColor redColor];
     
     [self.textBubbleView addSubview:self.bubbleImageView];
     [self.textBubbleView addConstraintsWithFormat:@"H:|[v0]|" withViews:self.bubbleImageView, nil];
     [self.textBubbleView addConstraintsWithFormat:@"V:|[v0]|" withViews:self.bubbleImageView, nil];
+    
+    [self.textBubbleView addSubview:self.messageImageView];
+    [self.textBubbleView addConstraintsWithFormat:@"H:|[v0]|" withViews:self.messageImageView, nil];
+    [self.textBubbleView addConstraintsWithFormat:@"V:|[v0]|" withViews:self.messageImageView, nil];
+    
 }
 
 @end

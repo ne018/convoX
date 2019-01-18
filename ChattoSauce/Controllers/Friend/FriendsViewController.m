@@ -13,8 +13,11 @@
 #import "LoginViewController.h"
 #import "PeopleViewController.h"
 #import "Firebase.h"
+#import "OpenDatabase.h"
 
 @interface FriendsViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -45,10 +48,55 @@ static NSString * const reuseIdentifier = @"FriendCell";
     [self.collectionView registerClass:[FriendCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     [self setupData];
+    
+    [self observeUserMessages];
+}
+
+-(void)observeUserMessages{
+//    [self.messages removeAllObjects];
+//    [self.messagesDictionary removeAllObjects];
+//    [self.collectionView reloadData];
+    
+    NSString *uid = [FIRAuth.auth.currentUser uid];
+    
+    if(uid.length > 0){
+        FIRDatabaseReference *ref = [[FIRDatabase.database.reference child:@"user-messages"] child:uid];
+        [ref observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            NSString *uniqueID = snapshot.key;
+            FIRDatabaseReference *messageReference = [[FIRDatabase.database.reference child:@"messages"] child:uniqueID];
+            [messageReference observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+                
+                NSDictionary *messageSnapshot = (NSDictionary *)snapshot.value;
+                if(messageSnapshot.count > 0){
+                    Message *message = [[Message alloc] initWithDictionary:messageSnapshot];
+                    
+                    [self.messagesDictionary setObject:message forKey:message.chatPartnerId];
+                    self.messages = self.messagesDictionary.allValues.mutableCopy;
+                    
+                    NSSortDescriptor * descriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+                    NSArray *sortedMsgs = [self.messages.mutableCopy sortedArrayUsingDescriptors:@[descriptor]];
+                    
+                    self.messages = sortedMsgs.mutableCopy;
+                    
+                    [self.timer invalidate];
+                    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(handleReloadTable) userInfo:nil repeats:false];
+                }
+                
+            } withCancelBlock:nil];
+        } withCancelBlock:nil];
+    }
+}
+
+-(void)handleReloadTable{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"reload collectionview");
+        [self.collectionView reloadData];
+    });
 }
 
 -(void)handleNewMessage{
     PeopleViewController *peopleVC = [[PeopleViewController alloc] init];
+    [peopleVC setCancelBarButton];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:peopleVC];
     [self presentViewController:navController animated:true completion:nil];
 }
@@ -58,16 +106,23 @@ static NSString * const reuseIdentifier = @"FriendCell";
         [self performSelector:@selector(handleLogout) withObject:nil afterDelay:0];
     }else{
         NSString *uid = FIRAuth.auth.currentUser.uid;
-        [[[FIRDatabase.database.reference child:@"users"] child:uid] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-            NSDictionary *snapshotDict = (NSDictionary *)snapshot;
-        } withCancelBlock:nil];
+        if(uid.length > 0){
+            [[[FIRDatabase.database.reference child:@"users"] child:uid] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+                NSDictionary *snapshotDict = (NSDictionary *)snapshot;
+            } withCancelBlock:nil];
+        }
     }
 }
 
 - (void)handleLogout{
     
+    //clear tables
+    NSArray *tablesCS = @[@"friend", @"message"];
+    [OpenDatabase truncateAllTables:tablesCS];
+    
+    NSError *errorSignout;
+    
     @try {
-        NSError *errorSignout;
         [FIRAuth.auth signOut:&errorSignout];
     } @catch (NSException *exception) {
         NSLog(@"error logout: %@", exception);
@@ -84,6 +139,13 @@ static NSString * const reuseIdentifier = @"FriendCell";
         _messages = [[NSMutableArray alloc] init];
     }
     return _messages;
+}
+
+- (NSMutableDictionary *)messagesDictionary{
+    if(!_messagesDictionary){
+        _messagesDictionary = [[NSMutableDictionary alloc] init];
+    }
+    return _messagesDictionary;
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -111,7 +173,6 @@ static NSString * const reuseIdentifier = @"FriendCell";
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     ChatLogViewController *chatLogVC = [[ChatLogViewController alloc] initWithCollectionViewLayout:flowLayout];
     chatLogVC.myFriend = [[self.messages objectAtIndex:indexPath.item] myFriend];

@@ -138,7 +138,7 @@
 }
 
 -(void)registerUserIntoDatabaseWithUID:(NSString *)uid withValues:(NSDictionary *)values{
-    FIRDatabaseReference *ref = [FIRDatabase.database referenceFromURL:@"https://convox-c659d.firebaseio.com/"];
+    FIRDatabaseReference *ref = [FIRDatabase.database reference];
     FIRDatabaseReference *userRef = [[ref child:@"users"] child:uid];
     [userRef updateChildValues:values withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
         if(error != nil){
@@ -293,6 +293,7 @@
     [self.view addSubview:self.loginRegisterButton];
     [self.view addSubview:self.profileImageView];
     [self.view addSubview:self.loginRegisterSegmentedControl];
+
     
     [self setupInputContainerView];
     [self setupLoginRegisterButton];

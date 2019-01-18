@@ -12,7 +12,7 @@
 #define DBNAME  @"chattosauce"
 #define THEMECOLOR1 [UIColor colorWithRed:0 green:137/255 blue:249/255 alpha:1]
 
-#define mainScreenHeight UIScreen.mainScreen.bounds.size.height;
-#define mainScreenWidth UIScreen.mainScreen.bounds.size.width;
+#define mainScreenHeight [UIScreen mainScreen].bounds.size.height;
+#define mainScreenWidth [UIScreen mainScreen].bounds.size.width;
 
 #endif /* prefixHeader_h */

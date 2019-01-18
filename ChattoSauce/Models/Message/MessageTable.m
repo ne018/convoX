@@ -19,8 +19,10 @@
                                            @"messageid":@"",
                                            @"text":@"",
                                            @"date":@"",
-                                           @"isSender":@"",
-                                           @"fkfriendid":@""
+                                           @"touniqueid":@"",
+                                           @"fromuniqueid":@""
+//                                           @"isSender":@"",
+//                                           @"fkfriendid":@""
                                            }.mutableCopy;
         for (NSString *key in [dict allKeys]) {
             if([self containsKey:dictModel key:key]){
@@ -43,8 +45,10 @@
                                            @"messageid":@"",
                                            @"text":@"",
                                            @"date":@"",
-                                           @"isSender":@"",
-                                           @"fkfriendid":@""
+                                           @"touniqueid":@"",
+                                           @"fromuniqueid":@""
+//                                           @"isSender":@"",
+//                                           @"fkfriendid":@""
                                            }.mutableCopy;
         for (NSString *key in [dict allKeys]) {
             if([self containsKey:dictModel key:key]){
@@ -242,12 +246,20 @@
 +(NSString *)DATE{
     return @"date";
 }
++(NSString *)TOUNIQUEID{
+    return @"touniqueid";
+}
++(NSString *)FROMUNIQUEID{
+    return @"fromuniqueid";
+}
+/*
 +(NSString *)ISSENDER{
     return @"isSender";
 }
 +(NSString *)FKFRIENDID{
     return @"fkfriendid";
 }
+ */
 
 +(NSString *)CONVERSATION_INDEX_IDENTIFIER {
     return @"message_indexes";
@@ -272,6 +284,15 @@
     [stringArr addObject:[CreateTableModel TEXT_TYPE]];
     [stringArr addObject:[CreateTableModel COMMA_SEP]];
     
+    [stringArr addObject:[self TOUNIQUEID]];
+    [stringArr addObject:[CreateTableModel TEXT_TYPE]];
+    [stringArr addObject:[CreateTableModel COMMA_SEP]];
+    
+    [stringArr addObject:[self FROMUNIQUEID]];
+    [stringArr addObject:[CreateTableModel TEXT_TYPE]];
+    [stringArr addObject:[CreateTableModel PARAMEND]];
+    
+    /*
     [stringArr addObject:[self ISSENDER]];
     [stringArr addObject:[CreateTableModel NUMERIC_TYPE]];
     [stringArr addObject:[CreateTableModel COMMA_SEP]];
@@ -279,6 +300,7 @@
     [stringArr addObject:[self FKFRIENDID]];
     [stringArr addObject:[CreateTableModel TEXT_TYPE]];
     [stringArr addObject:[CreateTableModel PARAMEND]];
+    */
     
     NSString *sql = [stringArr componentsJoinedByString:@""];
     NSLog(@"%@",sql);
@@ -296,10 +318,16 @@
     [stringArr addObject:[CreateTableModel COMMA_SEP]];
     [stringArr addObject:[self DATE]];
     [stringArr addObject:[CreateTableModel COMMA_SEP]];
+    [stringArr addObject:[self TOUNIQUEID]];
+    [stringArr addObject:[CreateTableModel COMMA_SEP]];
+    [stringArr addObject:[self FROMUNIQUEID]];
+    [stringArr addObject:[CreateTableModel PARAMEND]];
+    /*
     [stringArr addObject:[self ISSENDER]];
     [stringArr addObject:[CreateTableModel COMMA_SEP]];
     [stringArr addObject:[self FKFRIENDID]];
     [stringArr addObject:[CreateTableModel PARAMEND]];
+     */
     NSString *indexSql = [stringArr componentsJoinedByString:@""];
     NSLog(@"%@",indexSql);
     return indexSql;

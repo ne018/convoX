@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FriendsViewController : UICollectionViewController
 
 @property (nonatomic, strong) NSMutableArray *messages;
+@property (nonatomic, strong) NSMutableDictionary *messagesDictionary;
 
 @end
 

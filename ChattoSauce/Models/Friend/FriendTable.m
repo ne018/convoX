@@ -17,6 +17,7 @@
         //default values
         NSMutableDictionary *dictModel = @{
                                            @"friendid":@"",
+                                           @"uniqueid":@"",
                                            @"name":@"",
                                            @"email":@"",
                                            @"profileimagename":@""
@@ -40,6 +41,7 @@
     if(self) {
         NSMutableDictionary *dictModel = @{
                                            @"friendid":@"",
+                                           @"uniqueid":@"",
                                            @"name":@"",
                                            @"email":@"",
                                            @"profileimagename":@""
@@ -234,6 +236,9 @@
 +(NSString *)FRIENDID {
     return @"friendid";
 }
++(NSString *)UNIQUEID {
+    return @"uniqueid";
+}
 +(NSString *)NAME {
     return @"name";
 }
@@ -257,6 +262,10 @@
     [stringArr addObject:[self FRIENDID]];
     [stringArr addObject:[CreateTableModel PRIMARY_TYPE]];
     [stringArr addObject:[CreateTableModel AUTOINCREMENT]];
+    [stringArr addObject:[CreateTableModel COMMA_SEP]];
+    
+    [stringArr addObject:[self UNIQUEID]];
+    [stringArr addObject:[CreateTableModel TEXT_TYPE]];
     [stringArr addObject:[CreateTableModel COMMA_SEP]];
     
     [stringArr addObject:[self NAME]];
@@ -284,6 +293,8 @@
     [stringArr addObject:[self TABLE_NAME]];
     [stringArr addObject:[CreateTableModel PARAMSTART]];
     [stringArr addObject:[self FRIENDID]];
+    [stringArr addObject:[CreateTableModel COMMA_SEP]];
+    [stringArr addObject:[self UNIQUEID]];
     [stringArr addObject:[CreateTableModel COMMA_SEP]];
     [stringArr addObject:[self NAME]];
     [stringArr addObject:[CreateTableModel COMMA_SEP]];

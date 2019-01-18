@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Friend : NSObject
 
 @property (nonatomic, strong) NSString *friendid;
+@property (nonatomic, strong) NSString *uniqueid;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *profileimagename;
@@ -21,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSDictionary *dictForm;
 
--(instancetype)initWithName:(NSString *)name email:(NSString *)email profileimagename:(NSString *)profileimagename;
+-(instancetype)initWithName:(NSString *)name email:(NSString *)email profileImageName:(NSString *)profileimagename uniqueID:(NSString *)uniqueid;
 -(instancetype)initWithDictionary:(NSDictionary *)dict;
 
 @end
