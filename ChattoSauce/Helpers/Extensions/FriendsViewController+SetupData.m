@@ -22,21 +22,20 @@
 
 -(void)setupData{
     
-    [self clearData];
-    
+//    [self clearData];
 //    [self dummyDatas];
     [self fetchUsers];
-    
     [self loadData];
     
 }
 
 -(void)fetchUsers{
     [[FIRDatabase.database.reference child:@"users"] observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        NSDictionary *snapshotDict = (NSDictionary *)snapshot.value;
+        NSMutableDictionary *snapshotDict = (NSMutableDictionary *)snapshot.value;
+        [snapshotDict setValue:snapshot.key forKey:@"uniqueid"];
         NSString *myEmail = [FIRAuth.auth.currentUser email];
         if(!([myEmail compare:[snapshotDict valueForKey:@"email"] options:NSCaseInsensitiveSearch] == NSOrderedSame)){
-            [[FriendHelper instance] insertFriend:snapshotDict];
+            [[FriendHelper instance] insertFriend:snapshotDict.mutableCopy];
         }
     } withCancelBlock:^(NSError * _Nonnull error) {
         // do code here
@@ -99,10 +98,10 @@
 }
 
 -(void)loadData{
-    NSMutableArray *fetchMessages = [[MessageHelper instance] fetchMessagesGroupBy:@"fkfriendid"];
+    NSMutableArray *fetchMessages = [[MessageHelper instance] fetchMessagesGroupBy:@"touniqueid"];
     if(fetchMessages.count > 0){
         for (Message *msg in fetchMessages) {
-            Friend *friend = [[FriendHelper instance] getFriendByParam:@{@"friendid":msg.fkfriendid}];
+            Friend *friend = [[FriendHelper instance] getFriendByParam:@{@"uniqueid":msg.touniqueid}];
             msg.myFriend = friend;
             [self.messages addObject:msg];
         }

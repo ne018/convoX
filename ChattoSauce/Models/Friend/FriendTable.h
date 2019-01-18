@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FriendTable : NSObject
 
 @property (nonatomic, strong) NSString *friendid;
+@property (nonatomic, strong) NSString *uniqueid;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *profileimagename;
@@ -21,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(NSString *)TABLE_NAME;
 +(NSString *)FRIENDID;
++(NSString *)UNIQUEID;
 +(NSString *)NAME;
 +(NSString *)EMAIL;
 +(NSString *)PROFILEIMAGENAME;

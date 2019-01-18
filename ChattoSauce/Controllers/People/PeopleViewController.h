@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PeopleViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray *people;
+-(void)setCancelBarButton;
 
 @end
 

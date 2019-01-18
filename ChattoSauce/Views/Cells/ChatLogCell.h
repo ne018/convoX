@@ -8,6 +8,8 @@
 
 #import "BaseCell.h"
 #import <UIKit/UIKit.h>
+#import "CachedImageView.h"
+#import "ChatLogViewController.h"
 
 // define macros
 #define GRAYBUBBLEIMAGE [[[UIImage imageNamed:@"bubble_gray"] resizableImageWithCapInsets:UIEdgeInsetsMake(22, 26, 22, 26)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -19,8 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UITextView *messageTextView;
 @property (nonatomic, strong) UIView *textBubbleView;
-@property (nonatomic, strong) UIImageView *profileImageView;
+@property (nonatomic, strong) CachedImageView *profileImageView;
 @property (nonatomic, strong) UIImageView *bubbleImageView;
+@property (nonatomic, strong) CachedImageView *messageImageView;
+@property (nonatomic, strong) ChatLogViewController *chatLogController;
 
 
 @end

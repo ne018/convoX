@@ -64,7 +64,7 @@
     self.emailLabel.text = myFriend.email;
     
     [self.profileImage loadImageWithUrlString:myFriend.profileimagename withPlaceholder:@"avatar" completion:^{
-        
+        // do code here
     }];
     // load other data here
 }

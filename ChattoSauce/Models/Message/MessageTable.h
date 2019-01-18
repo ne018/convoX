@@ -15,8 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *messageid;
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) NSString *date;
-@property (nonatomic, strong) NSString *isSender;
-@property (nonatomic, strong) NSString *fkfriendid;
+@property (nonatomic, strong) NSString *fromuniqueid;
+@property (nonatomic, strong) NSString *touniqueid;
+//@property (nonatomic, strong) NSString *isSender;
+//@property (nonatomic, strong) NSString *fkfriendid;
 
 @property (nonatomic, strong) NSDictionary *dictForm;
 
@@ -24,8 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSString *)MESSAGEID;
 +(NSString *)TEXT;
 +(NSString *)DATE;
-+(NSString *)ISSENDER;
-+(NSString *)FKFRIENDID;
++(NSString *)FROMUNIQUEID;
++(NSString *)TOUNIQUEID;
+//+(NSString *)ISSENDER;
+//+(NSString *)FKFRIENDID;
 
 + (NSString *)CREATE_STRING;
 + (NSString *)CREATE_INDEX;

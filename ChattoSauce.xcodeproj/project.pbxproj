@@ -13,7 +13,6 @@
 		3C01CEA721C8F09C0029FB80 /* UIView+Constraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEA621C8F09C0029FB80 /* UIView+Constraint.m */; };
 		3C01CEAB21C94C050029FB80 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEAA21C94C050029FB80 /* Friend.m */; };
 		3C01CEAE21C9EF890029FB80 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEAD21C9EF890029FB80 /* Message.m */; };
-		3C18BC2921E4FAEB005A57AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C18BC2821E4FAEB005A57AB /* GoogleService-Info.plist */; };
 		3C61723E21D5E96D00818F05 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C61723D21D5E96D00818F05 /* CustomTabBarController.m */; };
 		3C75B3EF21C7A63A00B2BEE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75B3EE21C7A63A00B2BEE0 /* AppDelegate.m */; };
 		3C75B3F221C7A63A00B2BEE0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75B3F121C7A63A00B2BEE0 /* LoginViewController.m */; };
@@ -38,6 +37,7 @@
 		3CEC108821E63028004848B0 /* CachedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC108721E63028004848B0 /* CachedImageView.m */; };
 		3CEC108B21E6306B004848B0 /* CacheController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC108A21E6306B004848B0 /* CacheController.m */; };
 		3CEC108E21E630AD004848B0 /* DiscardableImageCacheItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC108D21E630AD004848B0 /* DiscardableImageCacheItem.m */; };
+		3CF3892A21EDB4D600D648EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CF3892921EDB4D600D648EA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,6 @@
 		3C01CEAA21C94C050029FB80 /* Friend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 		3C01CEAC21C9EF890029FB80 /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		3C01CEAD21C9EF890029FB80 /* Message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
-		3C18BC2821E4FAEB005A57AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3C61723C21D5E96D00818F05 /* CustomTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
 		3C61723D21D5E96D00818F05 /* CustomTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
 		3C75B3EA21C7A63A00B2BEE0 /* ChattoSauce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChattoSauce.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +98,7 @@
 		3CEC108A21E6306B004848B0 /* CacheController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheController.m; sourceTree = "<group>"; };
 		3CEC108C21E630AD004848B0 /* DiscardableImageCacheItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscardableImageCacheItem.h; sourceTree = "<group>"; };
 		3CEC108D21E630AD004848B0 /* DiscardableImageCacheItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscardableImageCacheItem.m; sourceTree = "<group>"; };
+		3CF3892921EDB4D600D648EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		60B25F66FF91173227700A85 /* libPods-ChattoSauce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChattoSauce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8643E9B53BD3C51EB2236B /* Pods-ChattoSauce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattoSauce.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChattoSauce/Pods-ChattoSauce.release.xcconfig"; sourceTree = "<group>"; };
 		ECAA4BDBC2D5E93941AD7EA1 /* Pods-ChattoSauce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattoSauce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChattoSauce/Pods-ChattoSauce.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 		3C75B3EC21C7A63A00B2BEE0 /* ChattoSauce */ = {
 			isa = PBXGroup;
 			children = (
-				3C18BC2821E4FAEB005A57AB /* GoogleService-Info.plist */,
+				3CF3892921EDB4D600D648EA /* GoogleService-Info.plist */,
 				3C75D9AE21DCE05E00EBCFF1 /* Models */,
 				59AD625521E337C3008B20C1 /* Views */,
 				3CA51A1721DDBBEB002625B9 /* Controllers */,
@@ -426,7 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C75B3FA21C7A63C00B2BEE0 /* LaunchScreen.storyboard in Resources */,
-				3C18BC2921E4FAEB005A57AB /* GoogleService-Info.plist in Resources */,
+				3CF3892A21EDB4D600D648EA /* GoogleService-Info.plist in Resources */,
 				3C75B3F721C7A63C00B2BEE0 /* Assets.xcassets in Resources */,
 				3C75B3F521C7A63A00B2BEE0 /* Main.storyboard in Resources */,
 			);

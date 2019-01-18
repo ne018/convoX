@@ -24,11 +24,14 @@ static NSString * const reuseIdentifier = @"PeopleCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(handleCancel)];
-    
+    self.navigationItem.title = @"Friends";
     [self.tableView registerClass:[PeopleCell self] forCellReuseIdentifier:reuseIdentifier];
 
     [self fetchingFiends];
+}
+
+-(void)setCancelBarButton{
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(handleCancel)];
 }
 
 -(NSMutableArray *)people{

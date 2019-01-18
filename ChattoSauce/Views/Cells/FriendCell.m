@@ -7,23 +7,25 @@
 //
 
 #import "FriendCell.h"
+#import "CachedImageView.h"
+#import "Firebase.h"
 
 @interface FriendCell()
 
-@property (strong,nonatomic) UIImageView *profileImgVw;
+@property (strong,nonatomic) CachedImageView *profileImgVw;
 @property (strong,nonatomic) UIView *dividerLineVw;
 @property (strong,nonatomic) UILabel *nameLabel;
 @property (strong,nonatomic) UILabel *messageLabel;
 @property (strong,nonatomic) UILabel *timeLabel;
-@property (strong,nonatomic) UIImageView *hasReadImgVw;
+@property (strong,nonatomic) CachedImageView *hasReadImgVw;
 
 @end
 
 @implementation FriendCell
 
--(UIImageView *)profileImgVw{
+-(CachedImageView *)profileImgVw{
     if(!_profileImgVw){
-        _profileImgVw = [[UIImageView alloc] init];
+        _profileImgVw = [[CachedImageView alloc] init];
         _profileImgVw.contentMode = UIViewContentModeScaleAspectFill;
         _profileImgVw.layer.cornerRadius = 30;
         _profileImgVw.layer.masksToBounds = true;
@@ -68,9 +70,9 @@
     return _timeLabel;
 }
 
--(UIImageView *)hasReadImgVw{
+-(CachedImageView *)hasReadImgVw{
     if(!_hasReadImgVw){
-        _hasReadImgVw = [[UIImageView alloc] init];
+        _hasReadImgVw = [[CachedImageView alloc] init];
         _hasReadImgVw.contentMode = UIViewContentModeScaleAspectFill;
         _hasReadImgVw.layer.cornerRadius = 10;
         _hasReadImgVw.layer.masksToBounds = true;
@@ -80,13 +82,9 @@
 
 -(void)setMessage:(Message *)message{
     _message = message;
-    self.nameLabel.text = message.myFriend.name;
-    self.messageLabel.text = message.text;
     
-    if(message.myFriend.profileimagename != nil){
-        self.profileImgVw.image = [UIImage imageNamed:message.myFriend.profileimagename];
-        self.hasReadImgVw.image = [UIImage imageNamed:message.myFriend.profileimagename];
-    }
+    [self setupNameAndProfileWithMessage:message];
+    
     if(message.date != nil){
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"h:mm a"];
@@ -102,6 +100,25 @@
         
         self.timeLabel.text = [dateFormatter stringFromDate:message.date];
     }
+    
+    self.messageLabel.text = message.text;
+}
+
+-(void)setupNameAndProfileWithMessage:(Message *)message{
+    if(message.touniqueid.length > 0){
+        NSString *uniqueID = message.chatPartnerId;
+        FIRDatabaseReference *ref = [[FIRDatabase.database.reference child:@"users"] child:uniqueID];
+        [ref observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            NSDictionary *usersSnapshot = (NSDictionary *)snapshot.value;
+            Friend *friendSnapshot = [[Friend alloc] initWithName:usersSnapshot[@"name"] email:usersSnapshot[@"email"] profileImageName:usersSnapshot[@"profileimagename"] uniqueID:snapshot.key];
+            message.myFriend = friendSnapshot;
+            self.nameLabel.text = message.myFriend.name;
+            if(message.myFriend.profileimagename != nil){
+                [self.profileImgVw loadImageWithUrlString:message.myFriend.profileimagename withPlaceholder:@"avatar" completion:^{}];
+                [self.hasReadImgVw loadImageWithUrlString:message.myFriend.profileimagename withPlaceholder:@"avatar" completion:^{}];
+            }
+        } withCancelBlock:nil];
+    }
 }
 
 -(void)setupViews{
@@ -112,8 +129,8 @@
     
     [self setupContainerView];
     
-    [self.profileImgVw setImage:[UIImage imageNamed:@"stevejobs"]];
-    [self.hasReadImgVw setImage:[UIImage imageNamed:@"stevejobs"]];
+    [self.profileImgVw setImage:[UIImage imageNamed:@"avatar"]];
+    [self.hasReadImgVw setImage:[UIImage imageNamed:@"avatar"]];
     
     [self addConstraintsWithFormat:@"H:|-12-[v0(60)]" withViews:self.profileImgVw, nil];
     [self addConstraintsWithFormat:@"V:[v0(60)]" withViews:self.profileImgVw, nil];

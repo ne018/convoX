@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) Friend *myFriend;
 @property (nonatomic, strong) NSMutableArray *messages;
 
+-(void)performZoomInStartingImageView:(UIImageView *)startingImageView;
+
 @end
 
 NS_ASSUME_NONNULL_END
