@@ -7,12 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1AB23B1087CA4F86B4A1276B /* libPods-ChattoSauce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B25F66FF91173227700A85 /* libPods-ChattoSauce.a */; };
 		3C01CEA121C8D5610029FB80 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEA021C8D5610029FB80 /* FriendCell.m */; };
 		3C01CEA421C8E72C0029FB80 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEA321C8E72C0029FB80 /* BaseCell.m */; };
 		3C01CEA721C8F09C0029FB80 /* UIView+Constraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEA621C8F09C0029FB80 /* UIView+Constraint.m */; };
 		3C01CEAB21C94C050029FB80 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEAA21C94C050029FB80 /* Friend.m */; };
 		3C01CEAE21C9EF890029FB80 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01CEAD21C9EF890029FB80 /* Message.m */; };
+		3C2DAD1021F597A3003D0180 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DAD0F21F597A3003D0180 /* GoogleService-Info.plist */; };
+		3C2DAD1221F5B2AD003D0180 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD1121F5B2AD003D0180 /* libxml2.2.dylib */; };
+		3C2DAD1421F5B2C9003D0180 /* libresolv.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD1321F5B2C9003D0180 /* libresolv.9.dylib */; };
+		3C2DAD1621F5B2DF003D0180 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD1521F5B2DF003D0180 /* Security.framework */; };
+		3C2DAD1821F5B2E7003D0180 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD1721F5B2E7003D0180 /* AVFoundation.framework */; };
+		3C2DAD1A21F5B2ED003D0180 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD1921F5B2ED003D0180 /* AVKit.framework */; };
+		3C2DAD1C21F5B2F2003D0180 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD1B21F5B2F2003D0180 /* MobileCoreServices.framework */; };
+		3C2DAD1E21F5B2F7003D0180 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD1D21F5B2F7003D0180 /* CoreGraphics.framework */; };
+		3C2DAD2021F5B2FC003D0180 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD1F21F5B2FC003D0180 /* CFNetwork.framework */; };
+		3C2DAD2221F5B301003D0180 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD2121F5B301003D0180 /* CoreLocation.framework */; };
+		3C2DAD2421F5B307003D0180 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD2321F5B306003D0180 /* Foundation.framework */; };
+		3C2DAD2621F5B30B003D0180 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD2521F5B30B003D0180 /* CoreData.framework */; };
+		3C2DAD2821F5B30F003D0180 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD2721F5B30F003D0180 /* UIKit.framework */; };
+		3C2DAD2A21F5B314003D0180 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DAD2921F5B314003D0180 /* SystemConfiguration.framework */; };
+		3C2DAD2F21F5CADD003D0180 /* ChatCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DAD2E21F5CADD003D0180 /* ChatCore.m */; };
+		3C2DAD3321F5FC3B003D0180 /* MainUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DAD3221F5FC3B003D0180 /* MainUser.m */; };
+		3C2DAD3721F5FD81003D0180 /* UserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DAD3621F5FD81003D0180 /* UserDefaultManager.m */; };
 		3C61723E21D5E96D00818F05 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C61723D21D5E96D00818F05 /* CustomTabBarController.m */; };
 		3C75B3EF21C7A63A00B2BEE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75B3EE21C7A63A00B2BEE0 /* AppDelegate.m */; };
 		3C75B3F221C7A63A00B2BEE0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75B3F121C7A63A00B2BEE0 /* LoginViewController.m */; };
@@ -37,7 +53,7 @@
 		3CEC108821E63028004848B0 /* CachedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC108721E63028004848B0 /* CachedImageView.m */; };
 		3CEC108B21E6306B004848B0 /* CacheController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC108A21E6306B004848B0 /* CacheController.m */; };
 		3CEC108E21E630AD004848B0 /* DiscardableImageCacheItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC108D21E630AD004848B0 /* DiscardableImageCacheItem.m */; };
-		3CF3892A21EDB4D600D648EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CF3892921EDB4D600D648EA /* GoogleService-Info.plist */; };
+		4D3B5D5A9F979FB851C032F5 /* Pods_ChattoSauce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E305AD11A9CB32D884EEDCBF /* Pods_ChattoSauce.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +67,26 @@
 		3C01CEAA21C94C050029FB80 /* Friend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 		3C01CEAC21C9EF890029FB80 /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		3C01CEAD21C9EF890029FB80 /* Message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		3C2DAD0F21F597A3003D0180 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3C2DAD1121F5B2AD003D0180 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = ../../../../../usr/lib/libxml2.2.dylib; sourceTree = "<group>"; };
+		3C2DAD1321F5B2C9003D0180 /* libresolv.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.9.dylib; path = ../../../../../usr/lib/libresolv.9.dylib; sourceTree = "<group>"; };
+		3C2DAD1521F5B2DF003D0180 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3C2DAD1721F5B2E7003D0180 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3C2DAD1921F5B2ED003D0180 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		3C2DAD1B21F5B2F2003D0180 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3C2DAD1D21F5B2F7003D0180 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3C2DAD1F21F5B2FC003D0180 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3C2DAD2121F5B301003D0180 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3C2DAD2321F5B306003D0180 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3C2DAD2521F5B30B003D0180 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3C2DAD2721F5B30F003D0180 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3C2DAD2921F5B314003D0180 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3C2DAD2D21F5CADD003D0180 /* ChatCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatCore.h; sourceTree = "<group>"; };
+		3C2DAD2E21F5CADD003D0180 /* ChatCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatCore.m; sourceTree = "<group>"; };
+		3C2DAD3121F5FC3B003D0180 /* MainUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainUser.h; sourceTree = "<group>"; };
+		3C2DAD3221F5FC3B003D0180 /* MainUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainUser.m; sourceTree = "<group>"; };
+		3C2DAD3521F5FD81003D0180 /* UserDefaultManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDefaultManager.h; sourceTree = "<group>"; };
+		3C2DAD3621F5FD81003D0180 /* UserDefaultManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDefaultManager.m; sourceTree = "<group>"; };
 		3C61723C21D5E96D00818F05 /* CustomTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
 		3C61723D21D5E96D00818F05 /* CustomTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
 		3C75B3EA21C7A63A00B2BEE0 /* ChattoSauce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChattoSauce.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,9 +134,8 @@
 		3CEC108A21E6306B004848B0 /* CacheController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheController.m; sourceTree = "<group>"; };
 		3CEC108C21E630AD004848B0 /* DiscardableImageCacheItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscardableImageCacheItem.h; sourceTree = "<group>"; };
 		3CEC108D21E630AD004848B0 /* DiscardableImageCacheItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscardableImageCacheItem.m; sourceTree = "<group>"; };
-		3CF3892921EDB4D600D648EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		60B25F66FF91173227700A85 /* libPods-ChattoSauce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChattoSauce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8643E9B53BD3C51EB2236B /* Pods-ChattoSauce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattoSauce.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChattoSauce/Pods-ChattoSauce.release.xcconfig"; sourceTree = "<group>"; };
+		E305AD11A9CB32D884EEDCBF /* Pods_ChattoSauce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChattoSauce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECAA4BDBC2D5E93941AD7EA1 /* Pods-ChattoSauce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattoSauce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChattoSauce/Pods-ChattoSauce.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +144,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AB23B1087CA4F86B4A1276B /* libPods-ChattoSauce.a in Frameworks */,
+				3C2DAD2A21F5B314003D0180 /* SystemConfiguration.framework in Frameworks */,
+				3C2DAD2821F5B30F003D0180 /* UIKit.framework in Frameworks */,
+				3C2DAD2621F5B30B003D0180 /* CoreData.framework in Frameworks */,
+				3C2DAD2421F5B307003D0180 /* Foundation.framework in Frameworks */,
+				3C2DAD2221F5B301003D0180 /* CoreLocation.framework in Frameworks */,
+				3C2DAD2021F5B2FC003D0180 /* CFNetwork.framework in Frameworks */,
+				3C2DAD1E21F5B2F7003D0180 /* CoreGraphics.framework in Frameworks */,
+				3C2DAD1C21F5B2F2003D0180 /* MobileCoreServices.framework in Frameworks */,
+				3C2DAD1A21F5B2ED003D0180 /* AVKit.framework in Frameworks */,
+				3C2DAD1821F5B2E7003D0180 /* AVFoundation.framework in Frameworks */,
+				3C2DAD1621F5B2DF003D0180 /* Security.framework in Frameworks */,
+				3C2DAD1421F5B2C9003D0180 /* libresolv.9.dylib in Frameworks */,
+				3C2DAD1221F5B2AD003D0180 /* libxml2.2.dylib in Frameworks */,
+				4D3B5D5A9F979FB851C032F5 /* Pods_ChattoSauce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +167,7 @@
 		3C01CE9C21C885AB0029FB80 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3C2DAD3421F5FD6B003D0180 /* UserDefaultManager */,
 				3CEC108521E6300D004848B0 /* CachedImage */,
 				3CEC107721E59C7D004848B0 /* CustomAlertView */,
 				3C75D9AA21DCD50500EBCFF1 /* FileWriter */,
@@ -165,6 +214,42 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		3C2DAD2B21F5BDAF003D0180 /* ChatManager */ = {
+			isa = PBXGroup;
+			children = (
+				3C2DAD3021F5FC15003D0180 /* MainUser */,
+				3C2DAD2C21F5BDCC003D0180 /* Core */,
+			);
+			path = ChatManager;
+			sourceTree = "<group>";
+		};
+		3C2DAD2C21F5BDCC003D0180 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3C2DAD2D21F5CADD003D0180 /* ChatCore.h */,
+				3C2DAD2E21F5CADD003D0180 /* ChatCore.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3C2DAD3021F5FC15003D0180 /* MainUser */ = {
+			isa = PBXGroup;
+			children = (
+				3C2DAD3121F5FC3B003D0180 /* MainUser.h */,
+				3C2DAD3221F5FC3B003D0180 /* MainUser.m */,
+			);
+			path = MainUser;
+			sourceTree = "<group>";
+		};
+		3C2DAD3421F5FD6B003D0180 /* UserDefaultManager */ = {
+			isa = PBXGroup;
+			children = (
+				3C2DAD3521F5FD81003D0180 /* UserDefaultManager.h */,
+				3C2DAD3621F5FD81003D0180 /* UserDefaultManager.m */,
+			);
+			path = UserDefaultManager;
+			sourceTree = "<group>";
+		};
 		3C75B3E121C7A63900B2BEE0 = {
 			isa = PBXGroup;
 			children = (
@@ -186,7 +271,7 @@
 		3C75B3EC21C7A63A00B2BEE0 /* ChattoSauce */ = {
 			isa = PBXGroup;
 			children = (
-				3CF3892921EDB4D600D648EA /* GoogleService-Info.plist */,
+				3C2DAD0F21F597A3003D0180 /* GoogleService-Info.plist */,
 				3C75D9AE21DCE05E00EBCFF1 /* Models */,
 				59AD625521E337C3008B20C1 /* Views */,
 				3CA51A1721DDBBEB002625B9 /* Controllers */,
@@ -216,6 +301,7 @@
 		3C75D9A821DCD44500EBCFF1 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				3C2DAD2B21F5BDAF003D0180 /* ChatManager */,
 				3C75D9A921DCD46100EBCFF1 /* prefixHeader.h */,
 			);
 			path = Config;
@@ -362,7 +448,20 @@
 		FBECA8A21FFE9D00AD0C5E76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60B25F66FF91173227700A85 /* libPods-ChattoSauce.a */,
+				3C2DAD2921F5B314003D0180 /* SystemConfiguration.framework */,
+				3C2DAD2721F5B30F003D0180 /* UIKit.framework */,
+				3C2DAD2521F5B30B003D0180 /* CoreData.framework */,
+				3C2DAD2321F5B306003D0180 /* Foundation.framework */,
+				3C2DAD2121F5B301003D0180 /* CoreLocation.framework */,
+				3C2DAD1F21F5B2FC003D0180 /* CFNetwork.framework */,
+				3C2DAD1D21F5B2F7003D0180 /* CoreGraphics.framework */,
+				3C2DAD1B21F5B2F2003D0180 /* MobileCoreServices.framework */,
+				3C2DAD1921F5B2ED003D0180 /* AVKit.framework */,
+				3C2DAD1721F5B2E7003D0180 /* AVFoundation.framework */,
+				3C2DAD1521F5B2DF003D0180 /* Security.framework */,
+				3C2DAD1321F5B2C9003D0180 /* libresolv.9.dylib */,
+				3C2DAD1121F5B2AD003D0180 /* libxml2.2.dylib */,
+				E305AD11A9CB32D884EEDCBF /* Pods_ChattoSauce.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -378,6 +477,7 @@
 				3C75B3E621C7A63A00B2BEE0 /* Sources */,
 				3C75B3E721C7A63A00B2BEE0 /* Frameworks */,
 				3C75B3E821C7A63A00B2BEE0 /* Resources */,
+				8530D512CD55E25E1521A5F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -426,7 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C75B3FA21C7A63C00B2BEE0 /* LaunchScreen.storyboard in Resources */,
-				3CF3892A21EDB4D600D648EA /* GoogleService-Info.plist in Resources */,
+				3C2DAD1021F597A3003D0180 /* GoogleService-Info.plist in Resources */,
 				3C75B3F721C7A63C00B2BEE0 /* Assets.xcassets in Resources */,
 				3C75B3F521C7A63A00B2BEE0 /* Main.storyboard in Resources */,
 			);
@@ -457,6 +557,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8530D512CD55E25E1521A5F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChattoSauce/Pods-ChattoSauce-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/KissXML/KissXML.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/XMPPFramework/XMPPFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/libidn/libidn.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KissXML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMPPFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libidn.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChattoSauce/Pods-ChattoSauce-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -464,6 +604,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2DAD3721F5FD81003D0180 /* UserDefaultManager.m in Sources */,
+				3C2DAD2F21F5CADD003D0180 /* ChatCore.m in Sources */,
 				3CEC108121E5C682004848B0 /* PeopleCell.m in Sources */,
 				3C75B40821C7FF8400B2BEE0 /* FriendsViewController.m in Sources */,
 				3CEC108821E63028004848B0 /* CachedImageView.m in Sources */,
@@ -484,6 +626,7 @@
 				3C01CEA121C8D5610029FB80 /* FriendCell.m in Sources */,
 				3C01CEA421C8E72C0029FB80 /* BaseCell.m in Sources */,
 				3C973D1521CA5E1D00AA4512 /* FriendsViewController+SetupData.m in Sources */,
+				3C2DAD3321F5FC3B003D0180 /* MainUser.m in Sources */,
 				3C01CEAE21C9EF890029FB80 /* Message.m in Sources */,
 				3CEC107E21E5BE28004848B0 /* PeopleViewController.m in Sources */,
 				3C75D9B121DCE1B300EBCFF1 /* MessageHelper.m in Sources */,
@@ -631,9 +774,35 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ECAA4BDBC2D5E93941AD7EA1 /* Pods-ChattoSauce.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ND778ZQ8A6;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SDKROOT)/usr/include/libresolv",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaAsyncSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuth\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuthInterop\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseStorage\"",
+					"\"${PODS_ROOT}/Headers/Public/GTMSessionFetcher\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/KissXML\"",
+					"\"${PODS_ROOT}/Headers/Public/XMPPFramework\"",
+					"\"${PODS_ROOT}/Headers/Public/leveldb-library\"",
+					"\"${PODS_ROOT}/Headers/Public/libidn\"",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = ChattoSauce/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -643,6 +812,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiveios.ChattoSauce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -650,9 +820,35 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AF8643E9B53BD3C51EB2236B /* Pods-ChattoSauce.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ND778ZQ8A6;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SDKROOT)/usr/include/libresolv",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaAsyncSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuth\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuthInterop\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseStorage\"",
+					"\"${PODS_ROOT}/Headers/Public/GTMSessionFetcher\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/KissXML\"",
+					"\"${PODS_ROOT}/Headers/Public/XMPPFramework\"",
+					"\"${PODS_ROOT}/Headers/Public/leveldb-library\"",
+					"\"${PODS_ROOT}/Headers/Public/libidn\"",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = ChattoSauce/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -662,6 +858,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiveios.ChattoSauce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
