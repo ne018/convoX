@@ -3,7 +3,7 @@
 
 target 'ChattoSauce' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
+  use_frameworks!
 
   # Pods for ChattoSauce
   
@@ -12,5 +12,18 @@ target 'ChattoSauce' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
+
+  # XMPP
+  pod 'XMPPFramework', :git => 'https://github.com/robbiehanson/XMPPFramework.git', :branch => 'master'
+  post_install do |installer|
+      installer.pods_project.targets.each do |target|
+          target.build_configurations.each do |config|
+               config.build_settings['SWIFT_VERSION'] = '4.1'
+          end
+      end
+  end
+
+  # Reactive Cocoa FRP
+  pod 'ReactiveObjC', '~> 3.1'
 
 end

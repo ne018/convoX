@@ -1,4 +1,11 @@
 PODS:
+  - CocoaAsyncSocket (7.6.3)
+  - CocoaLumberjack (3.4.2):
+    - CocoaLumberjack/Default (= 3.4.2)
+    - CocoaLumberjack/Extensions (= 3.4.2)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Extensions (3.4.2):
+    - CocoaLumberjack/Default
   - Firebase/Auth (5.13.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.5)
@@ -32,16 +39,30 @@ PODS:
   - GoogleUtilities/Logger (5.3.6):
     - GoogleUtilities/Environment
   - GTMSessionFetcher/Core (1.2.1)
+  - KissXML (5.2.3)
   - leveldb-library (1.20)
+  - libidn (1.35)
+  - ReactiveObjC (3.1.0)
+  - XMPPFramework (4.0.0):
+    - XMPPFramework/default (= 4.0.0)
+  - XMPPFramework/default (4.0.0):
+    - CocoaAsyncSocket (~> 7.6)
+    - CocoaLumberjack
+    - KissXML (~> 5.2)
+    - libidn (~> 1.35)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
   - FMDB
+  - ReactiveObjC (~> 3.1)
+  - XMPPFramework (from `https://github.com/robbiehanson/XMPPFramework.git`, branch `master`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CocoaAsyncSocket
+    - CocoaLumberjack
     - Firebase
     - FirebaseAuth
     - FirebaseAuthInterop
@@ -51,9 +72,24 @@ SPEC REPOS:
     - FMDB
     - GoogleUtilities
     - GTMSessionFetcher
+    - KissXML
     - leveldb-library
+    - libidn
+    - ReactiveObjC
+
+EXTERNAL SOURCES:
+  XMPPFramework:
+    :branch: master
+    :git: https://github.com/robbiehanson/XMPPFramework.git
+
+CHECKOUT OPTIONS:
+  XMPPFramework:
+    :commit: de41aa66e05d65f6c118cdb223e43be2d2e786ca
+    :git: https://github.com/robbiehanson/XMPPFramework.git
 
 SPEC CHECKSUMS:
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
   Firebase: 6df9a6114bc9f106a98fe83d5438d4d9833c2019
   FirebaseAuth: 9299ab178271bec7426967b05b2718bb6fc31f17
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
@@ -63,8 +99,12 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  KissXML: 09f88ff8161fd058d67b70740b8b516687b52823
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  libidn: e4576a956b797c584c77aaedfc6e3dd639b61bdc
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  XMPPFramework: 5d31ff9f73dce031b24bc49bcf88093627a3a86e
 
-PODFILE CHECKSUM: 96e481d47a288470d070337955d47c9613c55697
+PODFILE CHECKSUM: 39d92952b2da658a34c6d122a5e311daa538b5b3
 
 COCOAPODS: 1.5.3

@@ -10,6 +10,7 @@
 #import "FriendsViewController.h"
 #import "Firebase.h"
 #import "CustomAlertView.h"
+#import "ChatCore.h"
 
 @interface LoginViewController ()
 
@@ -75,6 +76,7 @@
         NSLog(@"Form is not valid");
         [CustomAlertView csAlertView:self withTitle:@"Error!" withMessage:@"Please fill up the fields"];
     }
+    
     [FIRAuth.auth signInWithEmail:self.emailTextField.text password:self.passwordTextField.text completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
         if(error != nil){
             NSLog(@"error: %@", error);
@@ -92,6 +94,7 @@
         [CustomAlertView csAlertView:self withTitle:@"Error!" withMessage:@"Please fill up all fields"];
         return;
     }
+    
     [FIRAuth.auth createUserWithEmail:self.emailTextField.text password:self.passwordTextField.text completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
         if(error != nil){
             NSLog(@"error: %@", error);
@@ -135,6 +138,8 @@
             }];
         }
     }];
+    
+    
 }
 
 -(void)registerUserIntoDatabaseWithUID:(NSString *)uid withValues:(NSDictionary *)values{
@@ -240,7 +245,7 @@
         }
         
         if (selectedImageFromPicker){
-            changedPic = true;
+            self->changedPic = true;
             self.profileImageView.image = selectedImageFromPicker;
         }
     }];
